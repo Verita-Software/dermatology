@@ -230,6 +230,16 @@ width:100%;
     background-color: #505e6d;
   }
 
+
+  .care-dropdown-container {
+    margin-bottom: 20px;
+  }
+  
+  .care-dropdown {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
   @media (max-width: 1290px){
     .appointment-button-care{
           font-size: 15px;

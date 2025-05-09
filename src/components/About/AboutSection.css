@@ -169,6 +169,30 @@
 }
 
 
+.about-dropdown {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.about-select {
+  background-color: #52606f;
+  color: #fff;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  /* border-radius: 4px; */
+}
+.about-select:focus{
+  border-color: #505E6D;
+}
+.about-react-select {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+
 /* Responsive layout */
 @media (max-width: 1024px) {
   .about-section {
@@ -179,9 +203,10 @@
 
   .about-sidebar {
     width: 100%;
-    height: auto;
+    height: 0;
     position: relative;
     top: 0;
+    padding: 0px 0px;
   }
 
   .about-sidebar ul {
@@ -214,6 +239,7 @@
   .about-content p {
     font-size: 18px;
     line-height: 30px;
+    margin-top: 30px;
   }
 
   .quote-text {
@@ -245,6 +271,7 @@
   .about-content p {
     font-size: 16px;
     line-height: 28px;
+    margin-top: 30px;
   }
 
   .about-sidebar li {
@@ -258,6 +285,6 @@
   }
 
   .office-image {
-    height: auto;
+    height: auto;
 }
 }
