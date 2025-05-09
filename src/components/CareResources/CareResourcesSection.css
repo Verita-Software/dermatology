@@ -1,0 +1,409 @@
+.care-section {
+    display: flex;
+    padding: 80px 100px;
+    gap: 80px;
+  }
+  
+  .sticky-sidebar{
+    position: sticky;
+  }
+  .stop-sticky{
+    
+  }
+  .care-sidebar {
+    background-color: #52606f;
+    padding: 40px 0px;
+    
+    width: 386px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    top: 40px;
+  }
+  .sidebar-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+    line-height: 58px;
+    padding: 0 55px 20px;
+    /* text-transform: uppercase; */
+  }
+  .care-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .care-sidebar li {
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 58px;
+    font-size: 24px;
+    color: white;
+    padding: 8px 55px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .care-sidebar li:hover,
+  .care-sidebar li.active {
+    background-color: #626e7c;
+  }
+
+  .specials-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 30px 0;
+width:100%;
+  }
+  /* .special-para-2{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 37px;
+    color: #000;
+  } */
+  
+  .care-content {
+    flex: 1;
+     width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .care-content h2 {
+    font-family: 'Shippori Minho B1',serif;
+    font-size: 65px;
+    color: #313942;
+    margin-bottom: 20px;
+  }
+
+  .care-content > .care-heading{
+    font-family: "Shippori Mincho B1",sans-serif;
+    font-size: 70px;
+    font-weight: 400;
+  }
+  
+  .care-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: #7A7979;
+    line-height: 45px;
+    margin-bottom: 30px;
+    white-space:  pre-line;
+    margin-top: 30px;
+  }
+  .care-content .special-para-2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: #000;
+    line-height: 39px;
+    margin-bottom: 30px;
+    white-space: pre-line;
+    margin-top: 30px;
+    font-weight: 500;
+}
+  
+
+
+  .office-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #313942;
+    margin-top: 20px;
+  }
+  
+  .office-hours {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 24px;
+    color: #7A7979;
+    line-height: 40px;
+    margin: 35px 0px;
+  }
+  
+  .care-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  
+  
+  .appointment-button-care {
+    width: auto;
+    font-size: 20px;
+    height: 64px;
+    padding: 10px 20px;
+    background-color: #505E6D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  .call-button-care{
+    width: auto;
+    font-size: 20px;
+    height: 64px;
+    padding: 10px 20px;
+    background-color: #818992;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  
+  .call-button:hover,
+  .appointment-button:hover {
+    background-color: #505e6d;
+  }
+  
+  
+  /* .call-button,
+  .appointment-button {
+    font-family: 'Poppins',sans-serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  font-size: 24px;
+  width: 358px;
+  height: 87px;
+  color: white;
+  background-color: #505E6D;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 23px;
+  }
+   */
+  .call-button:hover,
+  .appointment-button:hover {
+    background-color: #505e6d;
+  }
+  
+.meet-doctor {
+  font-family: 'Poppins',sans-serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  font-size: 24px;
+  width: 358px;
+  height: 87px;
+  color: white;
+  background-color: #505E6D;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 23px;
+  
+}
+
+
+  
+  
+  .call-button,
+  .appointment-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #505E6D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+  }
+  
+  .call-button:hover,
+  .appointment-button:hover {
+    background-color: #505e6d;
+  }
+
+  @media (max-width: 1290px){
+    .appointment-button-care{
+          font-size: 15px;
+    }
+    .call-button-care{
+      font-size: 15px ;
+    }
+    .care-content > .care-heading{
+
+      font-size: 60px;
+      
+    }
+  }
+
+  @media (max-width: 1070px){
+    .appointment-button-care{
+          font-size: 10px;
+          height: 40px;
+         
+
+    }
+    .care-content > .care-heading{
+
+      font-size: 50px;
+      
+    }
+    .call-button-care{
+      font-size: 10px;
+      height: 40px;
+      
+    }
+  }
+
+  @media (max-width: 768px) {
+    .care-section {
+      flex-direction: column;
+      padding: 60px 40px;
+      gap: 40px;
+    }
+    .care-content > .care-heading{
+
+      font-size: 35px;
+      
+    }
+  
+    .care-sidebar {
+      width: 100%;
+      max-width: none;
+      height: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px 0;
+    }
+  
+    .care-sidebar ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .care-sidebar li {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 5px;
+    }
+  
+    .care-content {
+      width: 100%;
+    }
+  
+    .care-content p,
+    .office-title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  
+    .office-hours {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  
+    .care-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .call-button,
+    .appointment-button {
+      width: 100%;
+      max-width: 300px;
+      font-size: 18px;
+      height: 60px;
+    }
+  }
+  .special-para-2{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 37px;
+    color: #000;
+  }
+  
+  @media (max-width: 768px) {
+    .care-sidebar {
+      width: 100%;
+      max-width: none;
+      height: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px 0;
+    }
+    .sticky-sidebar{
+      position: static;
+    }
+    .care-section {
+      padding: 40px 20px;
+    }
+  
+    .care-sidebar ul {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .care-sidebar li {
+     width: 100%;
+     text-align: center;
+     margin: 2px 0;
+    }
+  
+    .care-content h1 {
+      font-size: 32px;
+     
+    }
+  
+    .care-content p,
+    .office-title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  
+    .office-hours {
+      font-size: 18px;
+    }
+  
+    .call-button,
+    .appointment-button {
+      font-size: 16px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .care-sidebar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .care-sidebar li {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  
+    .care-buttons {
+      gap: 10px;
+    }
+  
+    .call-button,
+    .appointment-button {
+      font-size: 14px;
+      padding: 8px 16px;
+      height: 48px;
+      width:100%;
+  }
+  }
+  

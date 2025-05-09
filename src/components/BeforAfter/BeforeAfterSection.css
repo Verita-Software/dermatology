@@ -1,0 +1,136 @@
+.beforeafter-section {
+  display: flex;
+  padding: 80px 100px;
+  gap: 80px;
+}
+.sidebar-heading-before-after {
+  color: white;
+  font-size: 24px;
+  font-family: 'Shiponi Minco B1', sans-serif;
+  font-weight: 400;
+  padding: 0 55px 20px 55px;
+  margin:0;
+}
+
+.beforeafter-sidebar {
+  background-color: #52606f;
+  padding: 40px 0px;
+  width: 386px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 40px;
+}
+
+.beforeafter-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.beforeafter-sidebar li {
+  font-family: 'Poppins',sans-serif;
+  font-weight: 400;
+  line-height: 58px;
+  color: white;
+  padding: 8px 55px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 24px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+.beforeafter-sidebar li:hover {
+  background-color: #626e7c;
+}
+
+.beforeafter-sidebar li.active {
+  background-color: #626e7c;
+}
+
+.beforeafter-content {
+  flex: 1;
+}
+
+.beforeafter-content h1 {
+  font-family: 'Shippori Mincho B1', sans-serif;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 80px;
+  letter-spacing: 0%;
+  color: #313942;
+  margin-bottom: 45px;
+}
+
+.beforeafter-images {
+  display: flex;
+  flex-direction: column; 
+  gap: 63px; 
+  margin-top: 20px;
+}
+
+.beforeafter-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.beforeafter-image img {
+  width: 100%;
+  object-fit: cover;
+ height: auto;
+}
+
+@media (max-width: 768px) {
+  .page-container h2 {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  .beforeafter-section {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 40px;
+  }
+
+  .beforeafter-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .beforeafter-sidebar ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .beforeafter-sidebar li {
+    padding: 15px 20px;
+    text-align: center;
+  }
+  .beforeafter-content h1 {
+    font-family: 'Shippori Mincho B1', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 80px;
+    letter-spacing: 0%;
+    color: #313942;
+    margin-bottom: 45px;
+  }
+
+  .beforeafter-content h2 {
+    font-size: 36px;
+    line-height: 44px;
+    
+}
+}
