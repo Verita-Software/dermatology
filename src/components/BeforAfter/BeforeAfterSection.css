@@ -90,12 +90,12 @@
 }
 
 @media (max-width: 768px) {
-  .page-container h2 {
+  /* .page-container h2 {
     display: block;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 20px;
-}
+} */
   .beforeafter-section {
     flex-direction: column;
     padding: 30px 20px;

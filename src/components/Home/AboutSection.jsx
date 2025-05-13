@@ -5,7 +5,7 @@ import ImageAssets from "../common/ImageAssets";
 
 const contentData=[
   {
-    text:"Meet Alicia! She is one of Middletown Medicals Dermatologist Specializing in Medical Dermatology and non-surgical aesthetic treatments. With her expertise and dedication to enhancing natural beauty, Alicia is board-certified and committed to providing personalized care and  skincare and aesthetic goals.",
+    text:"Meet Alicia! She is one of Middletown Medicals Dermatologist Specializing in Medical Dermatology and non-surgical aesthetic treatments. With her expertise and dedication to enhancing natural beauty, Alicia is board-certified and committed to providing personalized care and  skincare and aesthetic ",
     button:"MEET DR. ALICIA",
     image:ImageAssets.drAlicaImage
   },

@@ -107,6 +107,15 @@ button[type="submit"] {
 
 /* Tablet view */
 @media (max-width: 1024px) {
+  .paybill-form-wrapper p {
+    font-family: 'Shippori Mincho B1', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 45px;
+    color: #313942;
+    letter-spacing: 0;
+    line-height: 80px;
+}
   .paybill-form-wrapper {
     padding: 40px 60px;
   }
@@ -131,6 +140,15 @@ button[type="submit"] {
 
 /* Mobile view */
 @media (max-width: 768px) {
+  .paybill-form-wrapper p {
+    font-family: 'Shippori Mincho B1', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 45px;
+    color: #313942;
+    letter-spacing: 0;
+    line-height: 80px;
+}
   .paybill-form-wrapper {
     padding: 30px 20px;
   }

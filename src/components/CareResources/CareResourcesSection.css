@@ -255,6 +255,9 @@ width:100%;
   }
 
   @media (max-width: 1070px){
+    .call-button-care{
+      padding: 10px 38px;
+    }
     .appointment-button-care{
           font-size: 10px;
           height: 40px;

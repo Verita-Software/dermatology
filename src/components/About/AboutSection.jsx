@@ -112,11 +112,17 @@ const AboutSection = ({ selectedSection, setSelectedSection }) => {
                 }),
                 option: (base, state) => ({
                   ...base,
-                  backgroundColor: state.isFocused ? "#626e7c" : "#fff",
-                  color: state.isFocused ? "#fff" : "#000",
+                  backgroundColor: state.isFocused
+                    ? "#626e7c"
+                    : state.isSelected
+                    ? "#505e6d"
+                    : "#fff",
+                  color: state.isFocused || state.isSelected ? "#fff" : "#000",
                   fontSize: "18px",
                   fontFamily: "Poppins, sans-serif",
                   padding: "10px 15px",
+                  cursor: "pointer",
+                  transition: "background-color 0.3s ease",
                 }),
               }}
             />
@@ -143,6 +149,8 @@ const AboutSection = ({ selectedSection, setSelectedSection }) => {
       </aside>
 
       <section className="about-content">
+        <h2 className="heading">{selectedSection}</h2>
+
         {content.paragraphs?.map((para, idx) => (
           <p key={idx}>{para}</p>
         ))}
@@ -192,6 +200,132 @@ const AboutSection = ({ selectedSection, setSelectedSection }) => {
 };
 
 export default AboutSection;
+
+// const AboutSection = ({ selectedSection, setSelectedSection }) => {
+//   const sections = Object.keys(sectionContent);
+//   const content = sectionContent[selectedSection] || {};
+//   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+//   useEffect(() => {
+//     const handleResize = () => {
+//       setIsMobile(window.innerWidth < 1024);
+//     };
+//     window.addEventListener("resize", handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }, []);
+
+//   const selectOptions = sections.slice(1).map((section) => ({
+//     value: section,
+//     label: section,
+//   }));
+
+//   return (
+//     <div className="about-section">
+//       <aside className="about-sidebar">
+//         {isMobile ? (
+//           <div className="about-dropdown">
+//             <Select
+//               className="about-react-select"
+//               value={{ value: selectedSection, label: selectedSection }}
+//               onChange={(option) => setSelectedSection(option.value)}
+//               options={selectOptions}
+//               styles={{
+//                 control: (base) => ({
+//                   ...base,
+//                   backgroundColor: "#52606f",
+//                   border: "none",
+//                   color: "#fff",
+//                   padding: "2px 5px",
+//                   fontFamily: "Poppins, sans-serif",
+//                 }),
+//                 singleValue: (base) => ({
+//                   ...base,
+//                   color: "#fff",
+//                 }),
+//                 option: (base, state) => ({
+//                   ...base,
+//                   backgroundColor: state.isFocused ? "#626e7c" : "#fff",
+//                   color: state.isFocused ? "#fff" : "#000",
+//                   fontSize: "18px",
+//                   fontFamily: "Poppins, sans-serif",
+//                   padding: "10px 15px",
+//                 }),
+//               }}
+//             />
+//           </div>
+//         ) : (
+//           <ul>
+//             {sections.map((section, index) =>
+//               index === 0 ? (
+//                 <h3 key={section} className="about-sidebar-heading">
+//                   {section}
+//                 </h3>
+//               ) : (
+//                 <li
+//                   key={section}
+//                   className={selectedSection === section ? "active" : ""}
+//                   onClick={() => setSelectedSection(section)}
+//                 >
+//                   {section}
+//                 </li>
+//               )
+//             )}
+//           </ul>
+//         )}
+//       </aside>
+
+//       <section className="about-content">
+//         <h2 className='heading'>{selectedSection}</h2>
+
+//         {content.paragraphs?.map((para, idx) => (
+//           <p key={idx}>{para}</p>
+//         ))}
+
+//         {selectedSection === "Testimonials" && content.quotes && (
+//           <div className="testimonial-quotes">
+//             {content.quotes.map((quote, idx) => (
+//               <div className="quote-box" key={idx}>
+//                 <p className="quote-text">“{quote.text}”</p>
+//                 <p className="quote-author">— {quote.author}</p>
+//               </div>
+//             ))}
+//           </div>
+//         )}
+
+//         {content.heading && (
+//           <h3 className="about-subheading">{content.heading}</h3>
+//         )}
+
+//         {content.secondParagraph &&
+//           content.secondParagraph
+//             .split("\n\n")
+//             .map((part, idx) => <p key={idx}>{part.trim()}</p>)}
+
+//         {selectedSection === "Our Office" && content.officeImages && (
+//           <div className="office-images">
+//             {content.officeImages.map((imgSrc, idx) => (
+//               <img
+//                 key={idx}
+//                 src={imgSrc}
+//                 alt={`Office view ${idx + 1}`}
+//                 className="office-image"
+//               />
+//             ))}
+//           </div>
+//         )}
+
+//         <div className="about-buttons">
+//           <button className="call-button-about">CALL 845-421-7040</button>
+//           <button className="appointment-button-about">
+//             REQUEST AN APPOINTMENT
+//           </button>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// };
+
+// export default AboutSection;
 
 
 

@@ -1,124 +1,98 @@
-import React, { useState, useEffect, useRef } from "react";
-import "./ServicesSection.css";
-import ImageAssets from "../common/ImageAssets";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import React, { useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/autoplay';
+import { Autoplay, EffectCoverflow } from 'swiper/modules';
+import ImageAssets from '../common/ImageAssets';
+import './ServicesSection.css';
 
-const images = [
-  { src: ImageAssets.acneTreatment, label: "Acne Treatment" },
-  { src: ImageAssets.cosmeticServices, label: "Cosmetic Services" },
-  { src: ImageAssets.injectables, label: "Injectables" },
-];
+import { IconButton } from '@mui/material';
+import { ArrowForward, ArrowBack } from '@mui/icons-material';
 
 const ServicesSection = () => {
-  const [current, setCurrent] = useState(0);
-  const [animate, setAnimate] = useState(false);
-  const[fade,setFade]=useState(true);
-  const sectionRef = useRef(null);
+  const images = [
+    { src: ImageAssets.cosmeticServices, name: "Cosmetic Services" },
+    { src: ImageAssets.injectables, name: "Injectables" },
+    { src: ImageAssets.cosmeticServices, name: "Cosmetic Services" },
+  ];
 
-  useEffect(() => {
-    const el = sectionRef.current;
-    const isInView =
-      el &&
-      el.getBoundingClientRect().top < window.innerHeight &&
-      el.getBoundingClientRect().bottom > 0;
-  
-    if (isInView) {
-      setAnimate(true);
-    }
-  
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setAnimate(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1 }
-    );
-  
-    if (el) observer.observe(el);
-  
-    return () => observer.disconnect();
-  }, []);
-  
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 3000); // Auto-change every 5s
-  
-    return () => clearInterval(interval);
-  }, []);
-
-
-  const nextSlide = () => {
-    setFade(false);
-    setTimeout(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-      setFade(true);
-    }, 100); // Slight delay before changing image
-  };
-  
-  const prevSlide = () => {
-    setFade(false);
-    setTimeout(() => {
-      setCurrent((prev) => (prev - 1 + images.length) % images.length);
-      setFade(true);
-  },100);
-  };
-
+  const swiperRef = useRef(null);
 
   return (
-    <section
-      ref={sectionRef}
-      className={`services-section ${animate ? "animate" : ""}`}
-    >
-      <div className="services-header">
-        <h2 className="section-title">OUR SERVICES</h2>
-        </div>
+    <div className="services-section-wrapper">
+       <div className="services-header">
+        <h2 className="services-heading">Our Services</h2>
         <div className="nav-buttons">
-          <button onClick={prevSlide}> 
-            <ArrowBackIosNewIcon/>
-          </button>
-          <button onClick={nextSlide}>
-          <ArrowForwardIosIcon />
-          </button>
+          <IconButton
+            className="nav-btn"
+            onClick={() => swiperRef.current?.swiper.slideNext()}
+          >
+            <ArrowBack />
+          </IconButton>
+          <IconButton
+            className="nav-btn"
+           
+            onClick={() => swiperRef.current?.swiper.slidePrev()}
+          >
+            <ArrowForward />
+          </IconButton>
         </div>
-      
-    
-      <div className={`services-carousel ${fade ? "fade-in" : "fade-out"}`}>
- 
-  <div className="carousel-desktop">
-    <div className="service-image left">
-      <img
-        src={images[(current - 1 + images.length) % images.length].src}
-        alt=""
-      />
-    </div>
-    <div className="service-image center">
-      <img src={images[current].src} alt={images[current].label} />
-      <p className="image-label">{images[current].label}</p>
-    </div>
-    <div className="service-image right">
-      <img src={images[(current + 1) % images.length].src} alt="" />
-    </div>
-  </div>
+     </div>
 
- 
-  <div className="carousel-mobile">
-    <div className="mobile-image-wrapper">
-      <button className="mobile-nav-button left" onClick={prevSlide}>‹</button>
-      <img
-        src={images[current].src}
-        alt={images[current].label}
-        className="mobile-image"
-      />
-      <button className="mobile-nav-button right" onClick={nextSlide}>›</button>
+      <div className="services-slider-container">
+        <Swiper
+          ref={swiperRef}
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+            reverseDirection: true,
+          }} 
+          // slidesPerView={'auto'} 
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+            slideShadows: false,
+          }}
+          speed={800}
+          slidesPerView={3}
+          spaceBetween={30}
+          modules={[Autoplay, EffectCoverflow]}
+          navigation={false}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+              centeredSlides: false,
+            },
+            768: {
+              slidesPerView: 1,centeredSlides: false,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {images.map((img, index) => (
+            <SwiperSlide key={index}>
+              <div className="slide-container">
+                <img
+                  src={img.src}
+                  alt={`Slide ${index + 1}`}
+                  className="slide-image"
+                />
+                <p className="slide-caption">{img.name}</p>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
-    <p className="image-label">{images[current].label}</p>
-  </div>
-</div>
-    </section>
   );
 };
 
@@ -129,132 +103,157 @@ export default ServicesSection;
 
 
 
+// import React, { useRef } from 'react'; 
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/css';
+// import 'swiper/css/effect-coverflow';
+// import 'swiper/css/autoplay';
+// import { Autoplay, EffectCoverflow } from 'swiper/modules';
+// import ImageAssets from '../common/ImageAssets';
+// import './ServicesSection.css';
+// import { IconButton } from '@mui/material';
+// import { ArrowForward, ArrowBack } from '@mui/icons-material'
 
-
-
-
-
-
-
-
-
-
-// import React, { useState, useEffect, useRef } from "react";
-// import "./ServicesSection.css";
-// import ImageAssets from "../common/ImageAssets";
-
-// const images = [
-//   { src: ImageAssets.acneTreatment, label: "Acne Treatment" },
-//   { src: ImageAssets.cosmeticServices, label: "Cosmetic Services" },
-//   { src: ImageAssets.injectables, label: "Injectables" },
-// ];
 
 // const ServicesSection = () => {
-//   const [current, setCurrent] = useState(0);
-//   const [animate, setAnimate] = useState(false);
-//   const[fade,setFade]=useState(true);
-//   const sectionRef = useRef(null);
+//   const images = [
+//     { src: ImageAssets.cosmeticServices, name: "Cosmetic Services" },
+//     { src: ImageAssets.injectables, name: "Injectables" },
+//     { src: ImageAssets.cosmeticServices, name: "Cosmetic Services" },
+//   ];
 
-//   useEffect(() => {
-//     const el = sectionRef.current;
-//     const isInView =
-//       el &&
-//       el.getBoundingClientRect().top < window.innerHeight &&
-//       el.getBoundingClientRect().bottom > 0;
-  
-//     if (isInView) {
-//       setAnimate(true);
-//     }
-  
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) {
-//           setAnimate(true);
-//           observer.unobserve(entry.target);
-//         }
-//       },
-//       { threshold: 0.1 }
-//     );
-  
-//     if (el) observer.observe(el);
-  
-//     return () => observer.disconnect();
-//   }, []);
-  
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrent((prev) => (prev + 1) % images.length);
-//     }, 3000); // Auto-change every 5s
-  
-//     return () => clearInterval(interval);
-//   }, []);
-
-
-//   const nextSlide = () => {
-//     setFade(false);
-//     setTimeout(() => {
-//       setCurrent((prev) => (prev + 1) % images.length);
-//       setFade(true);
-//     }, 100); // Slight delay before changing image
-//   };
-  
-//   const prevSlide = () => {
-//     setFade(false);
-//     setTimeout(() => {
-//       setCurrent((prev) => (prev - 1 + images.length) % images.length);
-//       setFade(true);
-//   },100);
-//   };
-
+//   const swiperRef = useRef(null);
 
 //   return (
-//     <section
-//       ref={sectionRef}
-//       className={`services-section ${animate ? "animate" : ""}`}
-//     >
-//       <div className="services-header">
-//         <h2 className="section-title">OUR SERVICES</h2>
+//     <div className="services-section-wrapper">
+//       <h2 className="services-heading">Our Services</h2>
+//       <div className="nav-buttons">
+//           <IconButton
+//             className="nav-btn"
+//             onClick={() => swiperRef.current?.swiper.slidePrev()}
+//           >
+//             <ArrowBack />
+//           </IconButton>
+//           <IconButton
+//             className="nav-btn"
+//             onClick={() => swiperRef.current?.swiper.slideNext()}
+//           >
+//             <ArrowForward />
+//           </IconButton>
 //         </div>
-//         <div className="nav-buttons">
-//           <button onClick={prevSlide}>‹</button>
-//           <button onClick={nextSlide}>›</button>
-//         </div>
-      
-    
-//       <div className={`services-carousel ${fade ? "fade-in" : "fade-out"}`}>
- 
-//   <div className="carousel-desktop">
-//     <div className="service-image left">
-//       <img
-//         src={images[(current - 1 + images.length) % images.length].src}
-//         alt=""
-//       />
-//     </div>
-//     <div className="service-image center">
-//       <img src={images[current].src} alt={images[current].label} />
-//       <p className="image-label">{images[current].label}</p>
-//     </div>
-//     <div className="service-image right">
-//       <img src={images[(current + 1) % images.length].src} alt="" />
-//     </div>
-//   </div>
 
- 
-//   <div className="carousel-mobile">
-//     <div className="mobile-image-wrapper">
-//       <button className="mobile-nav-button left" onClick={prevSlide}>‹</button>
-//       <img
-//         src={images[current].src}
-//         alt={images[current].label}
-//         className="mobile-image"
-//       />
-//       <button className="mobile-nav-button right" onClick={nextSlide}>›</button>
+//       <div className="services-slider-container">
+//         <Swiper
+//           effect="coverflow"
+//           grabCursor={true}
+//           centeredSlides={true}
+//           loop={true}
+//           autoplay={{
+//             delay: 3000,
+//             disableOnInteraction: false,reverseDirection: true,
+//           }}
+//           coverflowEffect={{
+//             rotate: 0,
+//             stretch: 0,
+//             depth: 100,
+//             modifier: 2.5,
+//             slideShadows: false,
+//           }}
+//           speed={800}
+//           slidesPerView={3}
+//           spaceBetween={30}
+//           modules={[Autoplay, EffectCoverflow]}
+//           navigation={false}
+//         >
+//           {images.map((img, index) => (
+//             <SwiperSlide key={index}>
+//               <div className="slide-container">
+//                 <img
+//                   src={img.src}
+//                   alt={`Slide ${index + 1}`}
+//                   className="slide-image"
+//                 />
+//                 <p className="slide-caption">{img.name}</p>
+//               </div>
+//             </SwiperSlide>
+//           ))}
+//         </Swiper>
+//       </div>
 //     </div>
-//     <p className="image-label">{images[current].label}</p>
-//   </div>
-// </div>
-//     </section>
 //   );
 // };
 
 // export default ServicesSection;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // import React from 'react';
+// // import { Swiper, SwiperSlide } from 'swiper/react';
+// // import 'swiper/css';
+// // import 'swiper/css/effect-coverflow';
+// // import 'swiper/css/navigation';
+// // import 'swiper/css/autoplay';
+// // import { Autoplay, EffectCoverflow, Navigation } from 'swiper/modules';
+// // import ImageAssets from '../common/ImageAssets';
+// // import './ServicesSection.css'; // ✅ Add CSS file
+
+// // const ServicesSection = () => {
+// //   const images = [
+// //     ImageAssets.cosmeticServices,
+// //     ImageAssets.injectables,
+// //     ImageAssets.cosmeticServices,
+   
+// //   ];
+
+// //   return (
+// //     <div style={{ width: '90%', margin: 'auto', paddingTop: '40px' }}>
+// //       <Swiper
+// //         effect="coverflow"
+// //         grabCursor={true}
+// //         centeredSlides={true}
+// //         loop={true}
+// //         autoplay={{
+// //           delay: 3000,
+// //           disableOnInteraction: false,
+// //           reverseDirection: true,
+// //         }}
+// //         navigation={false}
+// //         coverflowEffect={{
+// //           rotate: 0,
+// //           stretch: 0,
+// //           depth: 100,
+// //           modifier: 2.5,
+// //           slideShadows: false,
+// //         }}
+        
+// //         speed={800}
+// //         slidesPerView={3} // ✅ Ensures left, center, right
+// //         spaceBetween={30}
+// //         modules={[Autoplay, EffectCoverflow, Navigation]}
+// //       >
+// //         {images.map((img, index) => (
+// //           <SwiperSlide key={index}>
+// //             <img
+// //               src={img}
+// //               alt={`Slide ${index + 1}`}
+// //               className="slide-image"
+// //             />
+// //           </SwiperSlide>
+// //         ))}
+// //       </Swiper>
+// //     </div>
+// //   );
+// // };
+
+// // export default ServicesSection;

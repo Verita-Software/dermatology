@@ -426,6 +426,13 @@
 }
 
 @media (max-width: 1024px) {
+  .contact-content-heading {
+    font-size: 50px;
+    line-height: 80px;
+    margin-bottom: 20px;
+    font-family: 'Shippori Mincho B1', sans-serif;
+    color: #313942;
+}
   .map-container{
     margin-bottom: 170px;
   }
@@ -514,6 +521,13 @@
 }
 
 @media (max-width: 576px) {
+  .contact-content-heading {
+    font-size: 30px;
+    line-height: 80px;
+    margin-bottom: 20px;
+    font-family: 'Shippori Mincho B1', sans-serif;
+    color: #313942;
+}
   .map-container{
     margin-bottom: 170px;
   }
