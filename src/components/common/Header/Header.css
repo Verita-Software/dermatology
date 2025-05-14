@@ -1,151 +1,160 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: transparent;
 }
 
 .header-content {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+    position: relative; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
-  position: absolute;
-  top: 55px;
-  margin-left: 3vw;
-  display: flex;
-  align-items: center;
+    position: absolute;
+    top: 55px;
+    
+    margin-left: 3vw;
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-  width: 125px;
-  height: 125px;
+    width: 125px;
+    height: 125px;
 }
 
 .header-right {
-  position: absolute;
-  top: 55px;
-  right: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    position: absolute;
+    top: 55px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact {
-  font-size: 24px;
-  color: #000;
-  cursor: pointer;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
 }
-
-.contact.white {
-  color: white;
+.contact.white{
+    color: white;
+}
+.menu-icon.white button img{
+    filter: brightness(0) invert(1);
 }
 
 .menu-icon {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 24px;
-  margin-left: 20px;
-}
-
-.menu-icon button img {
-  transform: translateY(5px);
-  height: 41px;
-  width: 32px;
-  display: block;
-  object-fit: contain;
-  margin: 0;
-  padding: 0;
-}
-
-.hamburger-icon {
-  color: #000;
-}
-
-/* RESPONSIVE BREAKPOINTS */
-@media (max-width: 992px) {
-  .logo {
-    top: 40px;
-    left: 40px;
-  }
-
-  .logo img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .header-right {
-    top: 40px;
-    right: 30px;
-  }
-
-  .contact {
-    font-size: 20px;
-  }
-
-  .menu-icon {
-    margin-left: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact {
-    display: none;}
-  .hamburger-icon {
-    font-size: 15px !important;
-  }
-
-  .logo {
-    top: 30px;
-    left: 20px;
-  }
-
-  .logo img {
-    width: 42px;
-    height: 42px;
-  }
-
-  .header-right {
-    top: 30px;
-    right: 20px;
-  }
-
-  .contact {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    top: 20px;
-    left: 15px;
-  }
-
-  .logo img {
-    width: 35px;
-    height: 35px;
-  }
-
-  .header-right {
-    right: 15px;
-    margin-bottom: 5px;
     display: flex;
-    justify-content: center;
     align-items: center;
-  }
-
-  .contact {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-
-  .menu-icon {
-    font-size: 18px;
-    margin-left: 0;
-  }
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 20px;
 }
+.menu-icon button img{
+    transform: translateY(5px);
+    height: 41px;
+    width: 32px;
+    display: block;
+    object-fit: contain;
+    margin: 0;
+    padding: 0;
+}
+.hamburger{
+    color: #000;
+}
+
+
+@media (max-width: 992px) {
+    .logo {
+      top: 40px;
+      left: 40px;
+    }
+  
+    .logo img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .header-right {
+      top: 40px;
+      right: 30px;
+    }
+  
+    .contact {
+      font-size: 20px;
+    }
+  
+    .menu-icon {
+      margin-left: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger-icon{
+      font-size: 15px !important;
+    }
+    .logo {
+      top: 30px;
+      left: 20px;
+    }
+  
+    .logo img {
+      width: 42px;
+      height: 42px;
+    }
+  
+    .header-right {
+      top: 30px;
+      right: 20px;
+    }
+  
+    .contact {
+      font-size: 13px;
+    }
+  
+    
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      top: 20px;
+      left: 15px;
+    }
+   
+  
+    .logo img {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .header-right {
+      /* top: 20px; */
+      right: 15px;
+      /* top: 10px; */
+      margin-bottom: 5px;
+      
+      /* flex-direction: column; */
+      /* align-items: flex-end; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  
+    .contact {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+  
+    .menu-icon {
+      font-size: 18px;
+      margin-left: 0;
+  }
+  }
+
+

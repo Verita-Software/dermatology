@@ -1,39 +1,20 @@
+
 .hero {
   position: relative;
   width: 100%;
   height: 550px;
   overflow: hidden;
 }
-/* .hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(20, 20, 20, 0.4);
-
-  z-index: 1;
-} */
 
 .hero-image,
 .hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* object-fit: fill; */
-  /* object-fit: contain; */
-  position: center;
+  object-position: center;
 }
 
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 80px;
-  transform: translateY(-50%);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   position: absolute;
   top: 50%;
   left: 80px;
@@ -50,8 +31,7 @@
   font-weight: 400;
   font-size: 96px;
   margin-top: 150px;
-  /* padding: 0px 100px; */
-  margin-left: 0px;
+  /* margin-left: 0px; */
 }
 
 .book-now {
@@ -88,7 +68,37 @@
   animation-delay: 0.5s;
 }
 
+/* Responsive Media Queries */
+@media (max-width: 2050px) {
+  .hero-text {
+    margin-left: 396px;
+  }}
+@media (max-width: 1822px) {
+  .hero-text {
+    margin-left: 228px;
+  }}
+
+@media (max-width: 1707px) {
+  .hero-text {
+    margin-left: 270px ;
+  }}
+  @media (max-width: 1561px) {
+    .hero-text {
+      margin-left: 112px;
+    }}
+  @media (max-width: 1366px) {
+    .hero-text {
+      margin-left: 50px;
+    }}
+  @media (max-width: 1242px) {
+    .hero-text {
+      margin-left: 0px;
+    }}
 @media (max-width: 1200px) {
+  .hero-text {
+    margin-left: 60px;
+  }
+
   .hero-text h1 {
     font-size: 72px;
     margin-top: 187px;
@@ -99,26 +109,20 @@
     height: 65px;
     font-size: 22px;
   }
-
-  .hero-text {
-    left: 60px !important;
-  }
 }
 
 @media (max-width: 992px) {
-  .hero{
-    height:auto ;
-    aspect-ratio: 16/9;
+  .hero {
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
-  .hero-image,.hero-video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+
+  .hero-text {
+    margin-left: 40px;
   }
+
   .hero-text h1 {
     font-size: 56px;
-    margin-left: 0px;
   }
 
   .book-now {
@@ -126,27 +130,20 @@
     height: 60px;
     font-size: 20px;
   }
-
-  .hero-text {
-    left: 40px;
-  }
 }
 
 @media (max-width: 768px) {
-  .hero{
-    height:auto ;
-    aspect-ratio: 16/9;
+  .hero {
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
-  .hero-image,.hero-video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+
+  .hero-text {
+    left: 35px;
   }
- 
+
   .hero-text h1 {
     font-size: 42px;
-    margin-left: 0px;
   }
 
   .book-now {
@@ -154,15 +151,15 @@
     height: 27px;
     font-size: 12px;
     margin-bottom: 40px;
-
-  }
-
-  .hero-text {
-    left: 35px !important;
   }
 }
 
 @media (max-width: 480px) {
+  .hero-text {
+    left: 20px;
+    align-items: flex-start;
+  }
+
   .hero-text h1 {
     font-size: 30px;
     line-height: 1.2;
@@ -173,11 +170,11 @@
     width: 84px;
     height: 27px;
     font-size: 12px;
-    margin-bottom: 40px;
-  }
-
-  .hero-text {
-    left: 20px !important;
-    align-items: flex-start;
-  }
+    margin-bottom: 40px;
 }
+}
+
+
+
+
+
