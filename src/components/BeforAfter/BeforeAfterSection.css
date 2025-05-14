@@ -87,7 +87,17 @@
   width: 100%;
   object-fit: cover;
  height: auto;
+}  
+.dropdown-container {
+  width: 100%;
+  margin-bottom: 20px;
 }
+
+.beforeafter-dropdown {
+  width: 100%;
+  max-width: 100%;
+}
+
 
 @media (max-width: 768px) {
   /* .page-container h2 {

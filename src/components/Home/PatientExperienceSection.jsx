@@ -56,7 +56,7 @@ const PatientExperienceSection = () => {
             <img src={card.image} alt={card.title} />
             <p className="card-tag">{card.tag}</p>
             <h3 className="card-title">{card.title}</h3>
-            <button className="card-button">{card.button}</button>
+            <button className={index === 0 ? "card-btn-primary" : "card-btn-secondary"}>{card.button}</button>
           </div>
         ))}
       </div>

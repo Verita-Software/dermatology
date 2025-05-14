@@ -1,11 +1,9 @@
 
-
-
-
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
-import ImageAssets from '../ImageAssets';
+import CloseIcon from '@mui/icons-material/Close'
+import { IconButton } from '@mui/material';
 
 const Sidebar = ({ isMenuOpen, toggleMenu }) => {
   return (
@@ -14,9 +12,9 @@ const Sidebar = ({ isMenuOpen, toggleMenu }) => {
       <div className={`sidebar ${isMenuOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
           <span className="contact-number">845-421-7040</span>
-          <button className="close-btn" onClick={toggleMenu}>
-            <img src={ImageAssets.crossIconSidebar} alt="cross-icon" />
-          </button>
+          <IconButton  style={{marginTop:'-15px'}} className="close-btn" onClick={toggleMenu}>
+            <CloseIcon />
+          </IconButton>
         </div>
         <nav>
           <ul>

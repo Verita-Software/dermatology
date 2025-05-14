@@ -239,7 +239,9 @@ width:100%;
     font-family: 'Poppins', sans-serif;
   }
   
-
+  .css-tj5bde-Svg{
+    color: #fff !important;
+  }
   @media (max-width: 1290px){
     .appointment-button-care{
           font-size: 15px;
@@ -259,8 +261,9 @@ width:100%;
       padding: 10px 38px;
     }
     .appointment-button-care{
-          font-size: 10px;
-          height: 40px;
+      font-size: 18px;
+      height: 53px;
+      width: 100%;
          
 
     }
@@ -270,9 +273,9 @@ width:100%;
       
     }
     .call-button-care{
-      font-size: 10px;
-      height: 40px;
-      
+      font-size: 18px;
+        height: 53px;
+        width: 100%;
     }
   }
 

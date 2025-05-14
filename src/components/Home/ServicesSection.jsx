@@ -1,3 +1,4 @@
+
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -8,13 +9,15 @@ import ImageAssets from '../common/ImageAssets';
 import './ServicesSection.css';
 
 import { IconButton } from '@mui/material';
-import { ArrowForward, ArrowBack } from '@mui/icons-material';
+// import { ArrowForward, ArrowBack } from '@mui/icons-material';
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const ServicesSection = () => {
   const images = [
     { src: ImageAssets.cosmeticServices, name: "Cosmetic Services" },
     { src: ImageAssets.injectables, name: "Injectables" },
-    { src: ImageAssets.cosmeticServices, name: "Cosmetic Services" },
+    { src: ImageAssets.cosmeticServices, name: "Skin Rejuvenation" },
   ];
 
   const swiperRef = useRef(null);
@@ -25,17 +28,19 @@ const ServicesSection = () => {
         <h2 className="services-heading">Our Services</h2>
         <div className="nav-buttons">
           <IconButton
+          style={{backgroundColor:"#475666",color:"#FFF"}}
             className="nav-btn"
             onClick={() => swiperRef.current?.swiper.slideNext()}
           >
-            <ArrowBack />
+            <ArrowBackIosNewIcon />
           </IconButton>
           <IconButton
             className="nav-btn"
+            style={{backgroundColor:"#475666",color:"#FFF"}}
            
             onClick={() => swiperRef.current?.swiper.slidePrev()}
           >
-            <ArrowForward />
+            <ArrowForwardIosIcon />
           </IconButton>
         </div>
      </div>
@@ -47,10 +52,11 @@ const ServicesSection = () => {
           grabCursor={true}
           centeredSlides={true}
           loop={true}
+          // initialSlide={1}
           autoplay={{
             delay: 3000,
-            disableOnInteraction: false,
-            reverseDirection: true,
+            disableOnInteraction: false,reverseDirection: true,
+           
           }} 
           // slidesPerView={'auto'} 
           coverflowEffect={{
@@ -73,7 +79,7 @@ const ServicesSection = () => {
             768: {
               slidesPerView: 1,centeredSlides: false,
             },
-            1024: {
+            800: {
               slidesPerView: 3,
             },
           }}
