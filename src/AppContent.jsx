@@ -10,6 +10,7 @@ import PayBill from "./pages/PayBill";
 import Blog from "./pages/Blog";
 import BeforeAfter from "./pages/BeforeAfter";
 import Contact from "./pages/Contact";
+import ServicePage from "./pages/ServicePage";
 
 const AppContent = ({ isMenuOpen, toggleMenu }) => {
   const location = useLocation();
@@ -36,6 +37,7 @@ const AppContent = ({ isMenuOpen, toggleMenu }) => {
               <Route path="/blog" element={<Blog />} />
               <Route path="/before-after" element={<BeforeAfter />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services" element={<ServicePage />} />
             </Routes>
           </div>
         </main>

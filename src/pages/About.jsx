@@ -12,8 +12,8 @@ const About = () => {
     "Dr. Alicia Natalizio": ImageAssets.aboutImage1,
     "Dr. Juliana Cotler": ImageAssets.aboutJulianaCotler,
     "Dr. Radha Mikkilinen": ImageAssets.aboutRadhaMikkilinen,
-    "Our Office": ImageAssets.aboutImage5,
-    Testimonials: ImageAssets.aboutImage6,
+    "Our Office": ImageAssets.aboutOffice,
+    Testimonials: ImageAssets.aboutTest,
   };
 
   return (

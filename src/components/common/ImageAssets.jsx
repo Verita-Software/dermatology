@@ -33,11 +33,18 @@ import contactImage from '../../assets/images/contact-image.png';
 import beforAfter4 from '../../assets/images/beforeafter4.png';
 import posterImage from '../../assets/images/hero-frame.png'
 import beforeandafter from '../../assets/images/before-and-after.jpg';
+import aboutTest from '../../assets/images/about-test.png'
+import aboutOffice  from '../../assets/images/about-office.png'
+import service1 from '../../assets/images/service1.png';
+import service2 from '../../assets/images/service2.png';
+import service3 from '../../assets/images/service3.png';
+import service4 from '../../assets/images/service4.png';
+
 
 
 
 const ImageAssets={
-    logo,rejuvenatingImage,hamburgerIcon,drAlicaImage,drJulianaImage,drMikkilineni,crossIconSidebar,cosmeticServices,injectables,acneTreatment,Expert1,Expert2,aboutImage1,aboutJulianaCotler,aboutRadhaMikkilinen,officeImage1,officeImage2,officeImage3,officeImage4,careResourceImage,payBillImage,blogBanner,blog1,blog2,blog3,blog4,blog5,beforeAfterImg,beforeAfter1,beforeAfter2,beforeAfter3,beforAfter4,contactImage,posterImage,beforeandafter
+    logo,rejuvenatingImage,hamburgerIcon,drAlicaImage,drJulianaImage,drMikkilineni,crossIconSidebar,cosmeticServices,injectables,acneTreatment,Expert1,Expert2,aboutImage1,aboutJulianaCotler,aboutRadhaMikkilinen,officeImage1,officeImage2,officeImage3,officeImage4,careResourceImage,payBillImage,blogBanner,blog1,blog2,blog3,blog4,blog5,beforeAfterImg,beforeAfter1,beforeAfter2,beforeAfter3,beforAfter4,contactImage,posterImage,beforeandafter,aboutTest,aboutOffice,service1,service2,service3,service4
 };
 
 export default ImageAssets;

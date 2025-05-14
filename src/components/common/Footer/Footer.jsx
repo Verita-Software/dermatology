@@ -7,6 +7,7 @@
       <footer className="footer">
         <div className="footer-column">
           <h4>ABOUT</h4>
+          <p>Our Office</p>
           <p>Dr. Alicia Natalizio</p>
           <p>Dr. Radha Mikkilineni</p>
           <p>Dr. Juliana Cotter</p>
