@@ -106,6 +106,7 @@ const AboutSection = ({ selectedSection, setSelectedSection }) => {
                   color: "#fff",
                   padding: "2px 5px",
                   fontFamily: "Poppins, sans-serif",
+                  fontSize:"20px"
                 }),
                 singleValue: (base) => ({
                   ...base,

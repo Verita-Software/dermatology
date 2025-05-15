@@ -8,9 +8,9 @@ import AboutSection from "../components/About/AboutSection";
 // Define slug-to-title mapping
 const sectionSlugMap = {
   "our-office": "Our Office",
-  "dr-alicia": "Dr. Alicia Natalizio",
-  "dr-juliana": "Dr. Juliana Cotler",
-  "dr-radha": "Dr. Radha Mikkilinen",
+  "dr-alicia-natalizio": "Dr. Alicia Natalizio",
+  "dr-juliana-cotler": "Dr. Juliana Cotler",
+  "dr-radha-mikkilinen": "Dr. Radha Mikkilinen",
   "testimonials": "Testimonials",
 };
 
@@ -38,7 +38,7 @@ const About = () => {
 
   const handleSectionChange = (section) => {
     setSelectedSection(section);
-    const slug = reverseSlugMap[section] || "dr-alicia";
+    const slug = reverseSlugMap[section] || "dr-alicia-natalizio";
     navigate(`/about-us/${slug}`);
   };
 

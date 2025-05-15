@@ -9,28 +9,28 @@ const Footer = () => {
       {/* ABOUT */}
       <div className="footer-column">
         <h4>ABOUT</h4>
-        <Link to="/about-us"><p>Our Office</p></Link>
-        <Link to="/about-us/dr-alicia"><p>Dr. Alicia Natalizio</p></Link>
-        <Link to="/about-us/dr-radha"><p>Dr. Radha Mikkilineni</p></Link>
-        <Link to="/about-us/dr-juliana"><p>Dr. Juliana Cotter</p></Link>
+        <Link to="/about-us/our-office"><p>Our Office</p></Link>
+        <Link to="/about-us/dr-alicia-natalizio"><p>Dr. Alicia Natalizio</p></Link>
+        <Link to="/about-us/dr-radha-mikkilinen"><p>Dr. Radha Mikkilineni</p></Link>
+        <Link to="/about-us/dr-juliana-cotler"><p>Dr. Juliana Cotter</p></Link>
       </div>
 
       {/* SERVICES */}
       <div className="footer-column">
         <h4>SERVICES</h4>
-        <Link to="/before-after#Skin Rejuvenation"><p>Skin Rejuvenation</p></Link>
-        <Link to="/before-after#Injectables"><p>Injectables</p></Link>
-        <Link to="/before-after#Cosmetic Services"><p>Cosmetic Services</p></Link>
-        <Link to="/before-after#Acne Treatment"><p>Acne Treatment</p></Link>
+        <Link to="/services/skin-rejuvenation"><p>Skin Rejuvenation</p></Link>
+        <Link to="/services/injectables"><p>Injectables</p></Link>
+        <Link to="/services/cosmetic-services"><p>Cosmetic Services</p></Link>
+        <Link to="/services/acne-treatment"><p>Acne Treatment</p></Link>
       </div>
 
       {/* PATIENTS */}
       <div className="footer-column">
         <h4>PATIENTS</h4>
-        <Link to="/care-resources#Specials"><p>Special</p></Link>
-        <Link to="/care-resources#Insurance"><p>Insurance</p></Link>
-        <Link to="/care-resources#Resources"><p>Patient Portal</p></Link>
-        <Link to="/care-resources#Pay Bill"><p>Pay Bill</p></Link>
+        <Link to="/care-resources/specials"><p>Special</p></Link>
+        <Link to="/care-resources/insurance"><p>Insurance</p></Link>
+        <Link to="/care-resources/resources"><p>Patient Portal</p></Link>
+        <Link to="/care-resources/pay-bill"><p>Pay Bill</p></Link>
       </div>
 
       {/* CONTACT */}
