@@ -134,52 +134,9 @@ const ServiceSection = ({ selectedTab, setSelectedTab }) => {
 export default ServiceSection;
 
 
-// Injectables are non-surgical cosmetic treatments used to enhance facial features, reduce wrinkles, and restore lost volume with minimal downtime.
-// Popular injectable treatments include:
-
-// Botox – Smooths fine lines and wrinkles by relaxing facial muscles (commonly used on the forehead, crow’s feet, and frown lines).
-
-// Dermal Fillers – Add volume to areas like lips, cheeks, and under-eyes, and smooth out deep lines (e.g., nasolabial folds).
-
-// Lip Fillers – Specifically used to plump and shape the lips for a fuller appearance.
-
-// Chin/Jawline Fillers – Enhance facial contour and definition.
-
-// Skin Boosters – Hydrating injectables that improve skin texture and elasticity.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Skin Rejuvenation refers to treatments that restore a youthful, healthy glow to your skin by reducing signs of aging, sun damage, and uneven texture.
-// Common skin rejuvenation services include:
-
-// Chemical Peels – Remove dead skin and promote new cell growth
-
-// Laser Therapy – Targets pigmentation, fine lines, and scarring
-
-// Microneedling – Stimulates collagen for smoother, firmer skin
-
-// PRP (Vampire Facial) – Uses your own blood to boost healing and glow
-
-// Hydrafacial – Deep cleansing and hydration for instantly radiant skin
-// Cosmetic services are treatments that enhance appearance and improve skin health. They include:
-
-// Non-surgical options like Botox, fillers, chemical peels, PRP, and microdermabrasion for smoother, younger-looking skin.
-
-// Surgical procedures such as rhinoplasty, facelifts, liposuction, and tummy tucks for more permanent changes.
 
 // import React, { useEffect, useState } from "react";
 // import Select from "react-select";

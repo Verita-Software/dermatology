@@ -6,6 +6,17 @@ import ImageAssets from "../common/ImageAssets";
 
 const sectionContent = {
   "About ": { paragraphs: [""] },
+  "Our Office": {
+    paragraphs: [
+      "Meet Alicia! She is one of Middletown Medical’s Dermatologists specializing in Medical Dermatology and non-surgical aesthetic treatments. With her expertise and dedication to enhancing natural beauty, Alicia is committed to providing you with personalized care and achieving your skincare and aesthetic goals.",
+    ],
+    officeImages: [
+      ImageAssets.officeImage1,
+      ImageAssets.officeImage2,
+      ImageAssets.officeImage3,
+      ImageAssets.officeImage4,
+    ],
+  },
   "Dr. Alicia Natalizio": {
     paragraphs: [
       "At Dermatology, Dr. Alicia Natalizio has created a space that reflects her commitment to providing exceptional dermatology care in a modern, welcoming environment. Our office is thoughtfully designed to offer comfort and tranquility, ensuring each patient feels at ease during their visit. From the moment you step into our beautiful, state-of-the-art facility, you'll experience the highest level of care in a space that prioritizes your comfort and well-being.",
@@ -33,17 +44,7 @@ She holds two master's degrees in Physiology and Biophysics (Georgetown) as well
 
 She is Board Certified in Dermatology and Dermatopathology and is a Clinical Assistant Professor at Cornell Medical School.`,
   },
-  "Our Office": {
-    paragraphs: [
-      "Meet Alicia! She is one of Middletown Medical’s Dermatologists specializing in Medical Dermatology and non-surgical aesthetic treatments. With her expertise and dedication to enhancing natural beauty, Alicia is committed to providing you with personalized care and achieving your skincare and aesthetic goals.",
-    ],
-    officeImages: [
-      ImageAssets.officeImage1,
-      ImageAssets.officeImage2,
-      ImageAssets.officeImage3,
-      ImageAssets.officeImage4,
-    ],
-  },
+ 
   Testimonials: {
     paragraphs: [
       "At Dermatology , nothing means more to us than the trust and appreciation of our patients. While awards are nice, their testimonials are our greatest honor. Our main goal is your health and well-being, and we're grateful for the positive experiences shared by our patients.Read some of their reviews and see how Dr. Alicia Natalizio and our team make a difference.",
@@ -327,11 +328,6 @@ export default AboutSection;
 
 // export default AboutSection;
 
-
-
-
-
-
 // //@ts-nocheck
 
 // import React from "react";
@@ -363,9 +359,9 @@ export default AboutSection;
 //       "Meet Dr. Radha Mikkilineni! She brings extensive knowledge and experience to Mikkilineni Medical. Whether you’re looking to rejuvenate your skin, enhance your features, or address dermatological concerns, she’s here to help. Experience the care of a board-certified specialist who prioritizes your beauty and well-being.",
 //     ],
 //     heading: "Education",
-//     secondParagraph: `Dr. Mikkilineni received her medical degree from Georgetown Medical School. She completed her internship at Yale-New Haven Hospital, her dermatology residency at Case Western Reserve - University Hospitals of Cleveland, and her dermatopathology fellowship at New York University - Tisch Hospital. 
+//     secondParagraph: `Dr. Mikkilineni received her medical degree from Georgetown Medical School. She completed her internship at Yale-New Haven Hospital, her dermatology residency at Case Western Reserve - University Hospitals of Cleveland, and her dermatopathology fellowship at New York University - Tisch Hospital.
 
-// She holds two master's degrees in Physiology and Biophysics (Georgetown) as well as in Biostatistics and Epidemiology (The London School of Hygiene & Tropical Medicine). 
+// She holds two master's degrees in Physiology and Biophysics (Georgetown) as well as in Biostatistics and Epidemiology (The London School of Hygiene & Tropical Medicine).
 
 // She is Board Certified in Dermatology and Dermatopathology and is a Clinical Assistant Professor at Cornell Medical School.`,
 //   },
@@ -416,7 +412,7 @@ export default AboutSection;
 
 //   return (
 //     <div className="about-section">
-     
+
 //       <aside className="about-sidebar">
 //   {window.innerWidth >= 1024 ? (
 //     <ul>
@@ -455,7 +451,6 @@ export default AboutSection;
 //     </div>
 //   )}
 // </aside>
-
 
 //       <section className="about-content">
 //         {/* <h2 >{selectedSection}</h2> */}

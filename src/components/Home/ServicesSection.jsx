@@ -17,7 +17,7 @@ const ServicesSection = () => {
   const images = [
     { src: ImageAssets.cosmeticServices, name: "Cosmetic Services" },
     { src: ImageAssets.injectables, name: "Injectables" },
-    { src: ImageAssets.cosmeticServices, name: "Skin Rejuvenation" },
+    { src: ImageAssets.acneTreatment, name: "Skin Rejuvenation" },
   ];
 
   const swiperRef = useRef(null);

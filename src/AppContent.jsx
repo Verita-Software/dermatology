@@ -31,13 +31,13 @@ const AppContent = ({ isMenuOpen, toggleMenu }) => {
           <div className="page-container">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/patient-resources" element={<CareResources />} />
+              <Route path="/about-us/:sectionSlug?" element={<About />} />
+              <Route path="/care-resources/:careSlug?" element={<CareResources />} />
               <Route path="/pay-bill" element={<PayBill />} />
               <Route path="/blog" element={<Blog />} />
-              <Route path="/before-after" element={<BeforeAfter />} />
+              <Route path="/before-after/:sectionSlug?" element={<BeforeAfter />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/services" element={<ServicePage />} />
+              <Route path="/services/:serviceSlug?" element={<ServicePage />} />
             </Routes>
           </div>
         </main>

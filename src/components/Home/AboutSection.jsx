@@ -82,7 +82,7 @@ const AboutSection = () => {
         <p >
           {contentData[index].text}
         </p>
-        <Link to="/about">
+        <Link to="/about-us">
           <button className={`meet-doctor `}>
             {contentData[index].button}
           </button>

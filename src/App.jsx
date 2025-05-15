@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import AppContent from "./AppContent";
+import ScrollToTop from "./components/common/ScrollTop";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <ScrollToTop /> 
       <div className="app">
         <AppContent isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       </div>

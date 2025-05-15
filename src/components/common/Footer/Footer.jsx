@@ -1,40 +1,98 @@
 
-  import React from "react";
-  import "./Footer.css";
+import React from "react";
+import { Link } from "react-router-dom"; // Import Link
+import "./Footer.css";
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      {/* ABOUT */}
+      <div className="footer-column">
+        <h4>ABOUT</h4>
+        <Link to="/about-us"><p>Our Office</p></Link>
+        <Link to="/about-us/dr-alicia"><p>Dr. Alicia Natalizio</p></Link>
+        <Link to="/about-us/dr-radha"><p>Dr. Radha Mikkilineni</p></Link>
+        <Link to="/about-us/dr-juliana"><p>Dr. Juliana Cotter</p></Link>
+      </div>
+
+      {/* SERVICES */}
+      <div className="footer-column">
+        <h4>SERVICES</h4>
+        <Link to="/before-after#Skin Rejuvenation"><p>Skin Rejuvenation</p></Link>
+        <Link to="/before-after#Injectables"><p>Injectables</p></Link>
+        <Link to="/before-after#Cosmetic Services"><p>Cosmetic Services</p></Link>
+        <Link to="/before-after#Acne Treatment"><p>Acne Treatment</p></Link>
+      </div>
+
+      {/* PATIENTS */}
+      <div className="footer-column">
+        <h4>PATIENTS</h4>
+        <Link to="/care-resources#Specials"><p>Special</p></Link>
+        <Link to="/care-resources#Insurance"><p>Insurance</p></Link>
+        <Link to="/care-resources#Resources"><p>Patient Portal</p></Link>
+        <Link to="/care-resources#Pay Bill"><p>Pay Bill</p></Link>
+      </div>
+
+      {/* CONTACT */}
+      <div className="footer-column">
+        <h4>CONTACT</h4>
+        <p><strong>Phone:</strong> (845) 986 – 7474</p>
+        <p><strong>Address:</strong></p>
+        <p>200 Ronald Reagan Blvd.</p>
+        <p>Warwick, NY 1099</p>
+        <Link to="/contact"><p >Contact Page</p></Link>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+
+
+
+
+
+
+
+
+
+
+  // import React from "react";
+  // import "./Footer.css";
   
-  const Footer = () => {
-    return (
-      <footer className="footer">
-        <div className="footer-column">
-          <h4>ABOUT</h4>
-          <p>Our Office</p>
-          <p>Dr. Alicia Natalizio</p>
-          <p>Dr. Radha Mikkilineni</p>
-          <p>Dr. Juliana Cotter</p>
-        </div>
-        <div className="footer-column">
-          <h4>SERVICES</h4>
-          <p>Skin Rejuvenation</p>
-          <p>Injectables</p>
-          <p>Cosmetic Services</p>
-          <p>Acne Treatment</p>
-        </div>
-        <div className="footer-column">
-          <h4>PATIENTS</h4>
-          <p>Special</p>
-          <p>Insurance</p>
-          <p>Patient Portal</p>
-          <p>Pay Bill</p>
-        </div>
-        <div className="footer-column">
-          <h4>CONTACT</h4>
-          <p><strong>Phone:</strong> (845) 986 – 7474</p>
-          <p><strong>Address:</strong></p>
-          <p>200 Ronald Reagan Blvd.</p>
-          <p>Warwick, NY 1099</p>
-        </div>
-      </footer>
-    );
-  };
+  // const Footer = () => {
+  //   return (
+  //     <footer className="footer">
+  //       <div className="footer-column">
+  //         <h4>ABOUT</h4>
+  //         <p>Our Office</p>
+  //         <p>Dr. Alicia Natalizio</p>
+  //         <p>Dr. Radha Mikkilineni</p>
+  //         <p>Dr. Juliana Cotter</p>
+  //       </div>
+  //       <div className="footer-column">
+  //         <h4>SERVICES</h4>
+  //         <p>Skin Rejuvenation</p>
+  //         <p>Injectables</p>
+  //         <p>Cosmetic Services</p>
+  //         <p>Acne Treatment</p>
+  //       </div>
+  //       <div className="footer-column">
+  //         <h4>PATIENTS</h4>
+  //         <p>Special</p>
+  //         <p>Insurance</p>
+  //         <p>Patient Portal</p>
+  //         <p>Pay Bill</p>
+  //       </div>
+  //       <div className="footer-column">
+  //         <h4>CONTACT</h4>
+  //         <p><strong>Phone:</strong> (845) 986 – 7474</p>
+  //         <p><strong>Address:</strong></p>
+  //         <p>200 Ronald Reagan Blvd.</p>
+  //         <p>Warwick, NY 1099</p>
+  //       </div>
+  //     </footer>
+  //   );
+  // };
   
-  export default Footer;
+  // export default Footer;
