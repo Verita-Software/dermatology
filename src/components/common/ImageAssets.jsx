@@ -36,9 +36,9 @@ import beforeandafter from '../../assets/images/before-and-after.jpg';
 import aboutTest from '../../assets/images/about-test.png'
 import aboutOffice  from '../../assets/images/about-office.png'
 import service1 from '../../assets/images/service1.png';
-import service2 from '../../assets/images/service2.png';
-import service3 from '../../assets/images/service3.png';
-import service4 from '../../assets/images/service4.png';
+import service2 from '../../assets/images/service2.jpg';
+import service3 from '../../assets/images/service3.jpg';
+import service4 from '../../assets/images/service4.jpg';
 
 
 
