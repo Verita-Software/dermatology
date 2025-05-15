@@ -92,6 +92,7 @@ const ServicesSection = () => {
                   alt={`Slide ${index + 1}`}
                   className="slide-image"
                 />
+                
                 <p className="slide-caption">{img.name}</p>
               </div>
             </SwiperSlide>

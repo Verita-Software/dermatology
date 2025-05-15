@@ -15,7 +15,7 @@
   margin: 0 auto 40px auto;
 }
 .services-slider-container {
-  width: 90%;
+  width: 100%;
   margin: auto;
   /* margin-bottom: 100px; */
   margin-top: -30px;
@@ -57,13 +57,13 @@
 }
 .services-section-wrapper {
   background-color: #f0f0f0;
-  padding: 20px 20px 60px 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
 }
 
 .services-heading {
-  margin-bottom: 0px;
-    margin-top: 43px;
+  margin-bottom: 20px;
+    margin-top: 16px;
 
 }
 
@@ -102,21 +102,23 @@
   transition: filter 0.3s ease;
   height: 400px;
   transform: scaleX(1.1);
+
 }
 .slide-caption {
   font-family: "Shippori Minho B1", serif;
   font-weight: 400;
-  font-size: 44px;
+  font-size: 35px;
   color: #313942;
   line-height: 54px;
   letter-spacing: 0%;
   display: none;
   margin-top: 10px;
   font-weight: 500;
-  color: #444;
+  color: #444;margin-bottom: 25px;
 }
 /* Keep center image sharp */
 .swiper-slide-active .slide-image {
+  transform: scaleX();
   filter: none;
 }
 
@@ -130,28 +132,35 @@
 
 /* Center image big */
 .swiper-slide-active .slide-container {
-  transform: scaleY(1.2);
+   /* transform: scaleY(1.3);
   
-  transform: scaleX(1.1);
+  transform: scaleX(1.4);  */
+  transform: scale(1.3);
   opacity: 1;
   z-index: 2;
   margin-top: 40px;
+  margin: 35px;
+  padding: 20px 0px;
 }
 
 /* Slightly scale side slides (optional) */
 .swiper-slide-prev .slide-container,
 .swiper-slide-next .slide-container {
   transform: scale(0.85);
-  transform: scaleX(1.2);
-  transform: scaleY(0.7);
+  transform: scaleX(1.4);
+  transform: scaleY(0.8);
   opacity: 0.7;
   z-index: 1;
-  margin:60px;
+  /* margin:40px; */
+  /* padding: 40px; */
+  margin: 0 65px;
+  margin-top: 25px;
   
 }
 .swiper-3d {
   /* margin-left:10px !important; */
   /* margin-bottom: 250px !important; */
+  
 }
 
 @media (max-width: 1024px) {
@@ -160,17 +169,40 @@
   }
 }
 @media (max-width: 768px) {
+  .services-heading{
+    font-size: 25px;
+    margin-top: 20px;
+    
+    /* margin-top: 18px; */
+    margin-bottom: 47px;
+
+  }
+  .services-section-wrapper {
+    background-color: #f0f0f0;
+    padding: 20px 20px 35px 20px;
+    text-align: center;
+}
   .slide-caption {
     font-size: 33px;
+    margin-bottom: 60px;
   }
+  .services-header {
+    margin: 0 auto 15px auto;
+}
 }
 @media (max-width: 484px) {
+  .services-section-wrapper {
+    background-color: #f0f0f0;
+    padding: 20px 20px 0px 20px;
+    text-align: center;
+}
   .services-heading{
     margin-top: 10px;
   }
   
   .slide-caption {
     font-size: 25px;
+    margin-bottom: 15px;
   }
 }
 @media (max-width: 365px) {

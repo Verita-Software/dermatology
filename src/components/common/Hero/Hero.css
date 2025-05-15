@@ -75,28 +75,25 @@
   }}
 @media (max-width: 1822px) {
   .hero-text {
-    margin-left: 228px;
+    margin-left: 270px;
   }}
 
-@media (max-width: 1707px) {
+@media (max-width: 1708px) {
   .hero-text {
-    margin-left: 270px ;
+    margin-left: 216px ;
   }}
   @media (max-width: 1561px) {
     .hero-text {
       margin-left: 112px;
     }}
-  @media (max-width: 1366px) {
+  @media (max-width: 1367px) {
     .hero-text {
-      margin-left: 50px;
+      margin-left: 35px;
     }}
-  @media (max-width: 1242px) {
-    .hero-text {
-      margin-left: 0px;
-    }}
+
 @media (max-width: 1200px) {
   .hero-text {
-    margin-left: 60px;
+    margin-left: -49px;
   }
 
   .hero-text h1 {
@@ -118,7 +115,7 @@
   }
 
   .hero-text {
-    margin-left: 40px;
+    margin-left: -10px;
   }
 
   .hero-text h1 {
@@ -139,7 +136,7 @@
   }
 
   .hero-text {
-    left: 35px;
+    margin-left: -40px;
   }
 
   .hero-text h1 {
@@ -156,7 +153,7 @@
 
 @media (max-width: 480px) {
   .hero-text {
-    left: 20px;
+    margin-left: -50px;
     align-items: flex-start;
   }
 
