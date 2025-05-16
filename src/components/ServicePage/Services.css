@@ -119,12 +119,106 @@
 }
 
 .call-btn-service {
-  background-color: #5d6d7f;
+  background-color: #818992;
 }
 
 .appt-btn-service {
-  background-color: #273645;
+  background-color: #505E6D;
 }
+
+
+.custom-bullets {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.service-buttons a {
+  text-decoration: none;
+}
+.service-section-block h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  color: #2d3e50;
+}
+
+.service-section-block p {
+  margin: 0.5rem 0;
+}
+
+
+.faq-block {
+  margin-top: 1.5rem;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #2d3e50;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.faq-block hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0.8rem 0;
+}
+
+.heading-h3{
+  font-family: 'Poppins',sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  margin: 20px 0;
+  letter-spacing: 0;
+  line-height: 44px;
+  color: #475666;
+}
+.heading-h4{
+  font-family: 'Poppins',sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  margin: 20px 0;
+  letter-spacing: 0;
+  line-height: 44px;
+  color: #475666;
+}
+.bullet-heading {
+    font-family: 'Poppins',sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  margin: 20px 0;
+  letter-spacing: 0;
+  line-height: 44px;
+  color: #475666;
+  position: relative;
+  padding-left: 1.2em;
+}
+
+.bullet-heading::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #273645;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
 
 /* Responsive */
 @media (max-width: 1024px) {

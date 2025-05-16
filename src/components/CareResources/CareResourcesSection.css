@@ -141,35 +141,46 @@ width:100%;
   
   
   .appointment-button-care {
-    width: auto;
-    font-size: 20px;
-    height: 64px;
-    padding: 10px 20px;
-    background-color: #505E6D;
+   
+    flex: 1 1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    padding: 11px 10px;
+    background-color: #505E5D;
     color: white;
     border: none;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 500;
+    line-height: 39px;
+    /* margin: 20px 20px 0 0; */
+    justify-content: center;
+    text-align: center;
   }
   .call-button-care{
-    width: auto;
-    font-size: 20px;
-    height: 64px;
-    padding: 10px 20px;
+  
+ 
+    flex: 1 1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    padding: 11px 10px;
     background-color: #818992;
     color: white;
     border: none;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 500;
+    line-height: 39px;
+    /* margin: 20px 20px 0 0; */
+    justify-content: center;
+    text-align: center;
+
   }
   
   .call-button:hover,
   .appointment-button:hover {
     background-color: #505e6d;
+  }
+  .care-buttons a{
+    text-decoration: none;
   }
   
   
@@ -279,7 +290,7 @@ width:100%;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .care-section {
       flex-direction: column;
       padding: 60px 40px;

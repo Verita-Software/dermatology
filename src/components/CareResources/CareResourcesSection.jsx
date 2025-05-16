@@ -3,6 +3,7 @@ import Select, { components } from "react-select";
 import { FaChevronDown } from "react-icons/fa";
 import "./CareResourcesSection.css";
 import PayBillForm from "./PayBillForm";
+import { Link } from "react-router-dom";
 
 const careResourcesData = {
   Resources: {
@@ -136,6 +137,9 @@ const CareResourcesSection = ({ selectedTab, setSelectedTab }) => {
                 fontSize: "18px",
                 padding: "10px 15px",
                 fontFamily: "Poppins, sans-serif",
+                "&:active": {
+                    backgroundColor: "#405468",
+                  },
               }),
             }}
           />
@@ -188,11 +192,12 @@ const CareResourcesSection = ({ selectedTab, setSelectedTab }) => {
 
         {selectedTab !== "Pay Bill" && (
           <div className="care-buttons">
-            <button className="call-button-care">CALL: 845-421-7040</button>
-            <button className="appointment-button-care">
+            <a href="tel:8454217040"  className="call-button-care">CALL: 845-421-7040 </a>
+            <Link to="/contact" className="appointment-button-care">
               REQUEST AN APPOINTMENT
-            </button>
+           </Link>
           </div>
+           
         )}
 
         {selectedTab === "Pay Bill" && <PayBillForm />}

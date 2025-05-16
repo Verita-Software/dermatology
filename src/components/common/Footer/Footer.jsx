@@ -40,7 +40,6 @@ const Footer = () => {
         <p><strong>Address:</strong></p>
         <p>200 Ronald Reagan Blvd.</p>
         <p>Warwick, NY 1099</p>
-        <Link to="/contact"><p >Contact Page</p></Link>
       </div>
     </footer>
   );

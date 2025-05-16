@@ -47,7 +47,7 @@ const CareResources = () => {
         image={heroImages[selectedTab]}
         heading={
           <>
-            <span>CARE</span>
+            <span>PATIENT</span>
             <br />
             <span>RESOURCES</span>
           </>

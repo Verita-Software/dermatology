@@ -19,7 +19,7 @@ const Sidebar = ({ isMenuOpen, toggleMenu }) => {
         <nav>
           <ul>
             <li><NavLink to="/" end onClick={toggleMenu}>HOME</NavLink></li>
-            <li><NavLink to="/about-us" onClick={toggleMenu}>ABOUT</NavLink></li>
+            <li><NavLink to="/about-us" onClick={toggleMenu}>ABOUT US</NavLink></li>
             <li><NavLink to="/services" onClick={toggleMenu}>SERVICES</NavLink></li>
             <li><NavLink to="/care-resources" onClick={toggleMenu}>PATIENT RESOURCES</NavLink></li>
             <li><NavLink to="/pay-bill" onClick={toggleMenu}>PAY BILL</NavLink></li>

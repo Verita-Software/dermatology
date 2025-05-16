@@ -21,7 +21,7 @@ const ContactSection = () => {
         </aside>
 
         <section className="contact-content">
-          <p className='contact-content-heading'>Contact Us</p>
+          <p className="contact-content-heading">Contact Us</p>
           <div className="contact-boxes">
             <div className="contact-card">
               <p className="heading">ADDRESS</p>
@@ -30,7 +30,15 @@ const ContactSection = () => {
                 <br />
                 Warwick, NY 1099
               </p>
-              <Link href="#">Map and Direction</Link>
+              {/* <Link href="#">Map and Direction</Link> */}
+              <a
+                href="https://maps.app.goo.gl/Vbx2FzQ5GD6u9EjS8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="map-link"
+              >
+                Map and Direction
+              </a>
             </div>
             <div className="contact-card">
               <p className="heading">SCHEDULE AN APPOINTMENT</p>
@@ -44,15 +52,27 @@ const ContactSection = () => {
             </div>
           </div>
           <div>
-            <hr style={{color:"#c3c3c3"}}/>
+            <hr style={{ color: "#c3c3c3" }} />
           </div>
           <div className="appointment-heading">
             <p className="about-subheading">Book an appointment</p>
             <div className="auth-links">
-              <Link to="#" onClick={() => {setShowSignup(true); setShowLogin(false)}}>
+              <Link
+                to="#"
+                onClick={() => {
+                  setShowSignup(true);
+                  setShowLogin(false);
+                }}
+              >
                 Sign up
               </Link>
-              <Link to="#" onClick={() => {setShowLogin(true); setShowSignup(false);}}>
+              <Link
+                to="#"
+                onClick={() => {
+                  setShowLogin(true);
+                  setShowSignup(false);
+                }}
+              >
                 Login
               </Link>
             </div>
@@ -77,9 +97,10 @@ const ContactSection = () => {
                   <input type="email" placeholder="Email" />
                   <input type="password" placeholder="Password" />
                   <input type="password" placeholder="Confirm Password" />
-                  <label >
+                  <label>
                     <input type="checkbox" />I AGREE TO THE
-                    <Link to="#">TERMS OF SERVICE</Link> AND ACKNOWLEDGE THAT I UNDERSTAND THE
+                    <Link to="#">TERMS OF SERVICE</Link> AND ACKNOWLEDGE THAT I
+                    UNDERSTAND THE
                     <Link to="#">PRIVACY POLICY</Link>
                   </label>
                   <button className="signup-button">SIGN UP</button>

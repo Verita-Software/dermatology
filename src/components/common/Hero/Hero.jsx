@@ -29,7 +29,10 @@ const Hero = ({ image, videoSrc, heading, showButton, posterImage }) => {
       )}
 
       <div className="hero-text">
-        <h1>{heading}</h1>
+        <div className="hero-heading">
+            {heading}
+        </div>
+        
         {showButton && (
           <button className="book-now" onClick={handleBookNowClick}>
             BOOK NOW
