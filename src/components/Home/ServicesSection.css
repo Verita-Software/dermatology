@@ -163,6 +163,13 @@
   
 }
 
+.active-slide-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 @media (max-width: 1024px) {
   .nav-buttons {
     display: none;

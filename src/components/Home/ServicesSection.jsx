@@ -1,5 +1,4 @@
-
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -9,26 +8,38 @@ import ImageAssets from '../common/ImageAssets';
 import './ServicesSection.css';
 
 import { IconButton } from '@mui/material';
-// import { ArrowForward, ArrowBack } from '@mui/icons-material';
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const ServicesSection = () => {
-  const images = [
-    { src: ImageAssets.cosmeticServices, name: "Cosmetic Services" },
-    { src: ImageAssets.injectables, name: "Injectables" },
-    { src: ImageAssets.acneTreatment, name: "Skin Rejuvenation" },
-  ];
-
   const swiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const images = [
+    {
+      src: ImageAssets.cosmeticServices,
+      name: "Cosmetic Services",
+      link: "/services/cosmetic-services"
+    },
+    {
+      src: ImageAssets.injectables,
+      name: "Injectables",
+      link: "/services/injectables"
+    },
+    {
+      src: ImageAssets.acneTreatment,
+      name: "Skin Rejuvenation",
+      link: "/services/skin-rejuvenation"
+    },
+  ];
 
   return (
     <div className="services-section-wrapper">
-       <div className="services-header">
+      <div className="services-header">
         <h2 className="services-heading">Our Services</h2>
         <div className="nav-buttons">
           <IconButton
-          style={{backgroundColor:"#475666",color:"#FFF"}}
+            style={{ backgroundColor: "#475666", color: "#FFF" }}
             className="nav-btn"
             onClick={() => swiperRef.current?.swiper.slideNext()}
           >
@@ -36,14 +47,13 @@ const ServicesSection = () => {
           </IconButton>
           <IconButton
             className="nav-btn"
-            style={{backgroundColor:"#475666",color:"#FFF"}}
-           
+            style={{ backgroundColor: "#475666", color: "#FFF" }}
             onClick={() => swiperRef.current?.swiper.slidePrev()}
           >
             <ArrowForwardIosIcon />
           </IconButton>
         </div>
-     </div>
+      </div>
 
       <div className="services-slider-container">
         <Swiper
@@ -52,13 +62,11 @@ const ServicesSection = () => {
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          // initialSlide={1}
           autoplay={{
             delay: 3000,
-            disableOnInteraction: false,reverseDirection: true,
-           
-          }} 
-          // slidesPerView={'auto'} 
+            disableOnInteraction: false,
+            reverseDirection: true,
+          }}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -71,32 +79,47 @@ const ServicesSection = () => {
           spaceBetween={30}
           modules={[Autoplay, EffectCoverflow]}
           navigation={false}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           breakpoints={{
             0: {
               slidesPerView: 1,
               centeredSlides: false,
             },
             768: {
-              slidesPerView: 1,centeredSlides: false,
+              slidesPerView: 1,
+              centeredSlides: false,
             },
             800: {
               slidesPerView: 3,
             },
           }}
         >
-          {images.map((img, index) => (
-            <SwiperSlide key={index}>
+          {images.map((img, index) => {
+            const isActive = index === activeIndex;
+
+            const slideContent = (
               <div className="slide-container">
                 <img
                   src={img.src}
                   alt={`Slide ${index + 1}`}
                   className="slide-image"
                 />
-                
                 <p className="slide-caption">{img.name}</p>
               </div>
-            </SwiperSlide>
-          ))}
+            );
+
+            return (
+              <SwiperSlide key={index}>
+                {isActive ? (
+                  <a href={img.link} className="active-slide-link">
+                    {slideContent}
+                  </a>
+                ) : (
+                  slideContent
+                )}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </div>
@@ -104,6 +127,119 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+
+
+
+
+
+
+
+// import React, { useRef } from 'react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import 'swiper/css';
+// import 'swiper/css/effect-coverflow';
+// import 'swiper/css/autoplay';
+// import { Autoplay, EffectCoverflow } from 'swiper/modules';
+// import ImageAssets from '../common/ImageAssets';
+// import './ServicesSection.css';
+
+// import { IconButton } from '@mui/material';
+// // import { ArrowForward, ArrowBack } from '@mui/icons-material';
+// import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+// import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
+// const ServicesSection = () => {
+//   const images = [
+//     { src: ImageAssets.cosmeticServices, name: "Cosmetic Services" },
+//     { src: ImageAssets.injectables, name: "Injectables" },
+//     { src: ImageAssets.acneTreatment, name: "Skin Rejuvenation" },
+//     // { src: ImageAssets.acneTreatment, name: "Skin Rejuvenation" },
+//   ];
+
+//   const swiperRef = useRef(null);
+
+//   return (
+//     <div className="services-section-wrapper">
+//        <div className="services-header">
+//         <h2 className="services-heading">Our Services</h2>
+//         <div className="nav-buttons">
+//           <IconButton
+//           style={{backgroundColor:"#475666",color:"#FFF"}}
+//             className="nav-btn"
+//             onClick={() => swiperRef.current?.swiper.slideNext()}
+//           >
+//             <ArrowBackIosNewIcon />
+//           </IconButton>
+//           <IconButton
+//             className="nav-btn"
+//             style={{backgroundColor:"#475666",color:"#FFF"}}
+           
+//             onClick={() => swiperRef.current?.swiper.slidePrev()}
+//           >
+//             <ArrowForwardIosIcon />
+//           </IconButton>
+//         </div>
+//      </div>
+
+//       <div className="services-slider-container">
+//         <Swiper
+//           ref={swiperRef}
+//           effect="coverflow"
+//           grabCursor={true}
+//           centeredSlides={true}
+//           loop={true}
+//           // initialSlide={1}
+//           autoplay={{
+//             delay: 3000,
+//             disableOnInteraction: false,reverseDirection: true,
+           
+//           }} 
+//           // slidesPerView={'auto'} 
+//           coverflowEffect={{
+//             rotate: 0,
+//             stretch: 0,
+//             depth: 100,
+//             modifier: 2.5,
+//             slideShadows: false,
+//           }}
+//           speed={800}
+//           slidesPerView={3}
+//           spaceBetween={30}
+//           modules={[Autoplay, EffectCoverflow]}
+//           navigation={false}
+//           breakpoints={{
+//             0: {
+//               slidesPerView: 1,
+//               centeredSlides: false,
+//             },
+//             768: {
+//               slidesPerView: 1,centeredSlides: false,
+//             },
+//             800: {
+//               slidesPerView: 3,
+//             },
+//           }}
+//         >
+//           {images.map((img, index) => (
+//             <SwiperSlide key={index}>
+//               <div className="slide-container">
+//                 <img
+//                   src={img.src}
+//                   alt={`Slide ${index + 1}`}
+//                   className="slide-image"
+//                 />
+                
+//                 <p className="slide-caption">{img.name}</p>
+//               </div>
+//             </SwiperSlide>
+//           ))}
+//         </Swiper>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ServicesSection;
 
 
 
