@@ -166,9 +166,13 @@
   }
 }
 @media (max-width: 480px) {
+  .caption-wrapper{
+    margin-top: 15px;
+  }
+  
   .services-section-wrapper {
     padding: 35px 20px;
-    height: 761px;
+    height: 730px;
   }
   .caption {
     font-size: 26px;

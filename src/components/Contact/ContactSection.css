@@ -305,6 +305,7 @@
   font-size: 17px;
   line-height: 100%;
   letter-spacing: 0%;
+  line-height: 50px;
 }
 
 .signup-modal-align {
@@ -384,7 +385,7 @@
   font-weight: 500;
 }
 .contact-sidebar{
-  height: 150px;
+  height: 126px;
   background-color: #52606f;
   padding: 40px 0px;
   width: 386px;
@@ -425,6 +426,12 @@
   margin-top: 40px;
 }
 
+input[type="checkbox" i]
+{
+  margin: 0 25px 0 0;
+}
+ 
+
 @media (max-width: 1024px) {
   .contact-content-heading {
     font-size: 50px;
@@ -450,7 +457,7 @@
     width: 100%;
     position: relative;
     top: unset;
-    padding: 20px;
+    /* padding: 20px; */
     height: auto;
     flex-direction: row;
     justify-content: center;
@@ -556,6 +563,7 @@
 
   .contact-sidebar {
     flex-direction: column;
+    height: 50px;
   }
 
   .contact-sidebar ul {

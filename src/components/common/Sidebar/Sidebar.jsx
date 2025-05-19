@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Sidebar.css';
 import CloseIcon from '@mui/icons-material/Close'
 import { IconButton } from '@mui/material';
@@ -11,7 +11,11 @@ const Sidebar = ({ isMenuOpen, toggleMenu }) => {
       {isMenuOpen && <div className="sidebar-overlay" onClick={toggleMenu}></div>}
       <div className={`sidebar ${isMenuOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <span className="contact-number">845-421-7040</span>
+          <Link to="/contact">
+                      
+                    
+          <span style={{cursor:"pointer",textDecoration:"none"}} className="contact-number">845-421-7040</span>
+          </Link>
           <IconButton  style={{marginTop:'-15px'}} className="close-btn" onClick={toggleMenu}>
             <CloseIcon />
           </IconButton>

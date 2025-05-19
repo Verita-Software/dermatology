@@ -10,6 +10,14 @@ const blogs = [
     title:
       "Rosacea Understanding Causes and Solutions with Dermatologist Expertise",
     date: "March 3, 2025",
+    content:
+      "Acne is one of the most frustrating skin conditions, and breakouts can be very diffic...",
+
+    image: ImageAssets.blog1,
+  },
+  {slug: "blog-2",
+    title: "Early-Stage Skin Cancer: Could It Look Like a Rash?",
+    date: "February 24, 2025",
     content: (
       <>
         <p>
@@ -96,14 +104,6 @@ const blogs = [
         </p>
       </>
     ),
-
-    image: ImageAssets.blog1,
-  },
-  {slug: "blog-2",
-    title: "Early-Stage Skin Cancer: Could It Look Like a Rash?",
-    date: "February 24, 2025",
-    content:
-      "Itchy skin, whether from dryness, allergies, or a minor irritation, is a temporary an...",
     image: ImageAssets.blog2,
   },
   {

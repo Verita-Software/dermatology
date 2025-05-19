@@ -45,9 +45,9 @@ const ContactSection = () => {
               <p className="content">
                 Phone: (845) 988 – 7474
                 <br />
-                Mon - 00:00am–00:00pm
+                Mon - 08:00am–04:00pm
                 <br />
-                Fri - 00:00am–00:00pm
+                Fri - 08:00am–04:00pm
               </p>
             </div>
           </div>

@@ -56,7 +56,7 @@
   flex: 1;
 }
 
-.service-page-content >.heading-main {
+.service-page-content > .heading-main {
   font-family: "Shippori Mincho B1", sans-serif;
   font-size: 65px;
   line-height: 80px;
@@ -177,6 +177,8 @@
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   color: #333;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .faq-icon {
@@ -191,13 +193,11 @@
   font-size: 18px;
   /* font-weight: bold; */
   flex-shrink: 0;
- 
 }
 
 .faq-icon:hover {
   cursor: pointer;
 }
-
 
 .faq-block hr {
   border: none;
@@ -206,7 +206,7 @@
 }
 
 .heading-h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Shippori Mincho B1", sans-serif;
 
   font-size: 30px;
   margin: 80px 0 0 0;
@@ -214,8 +214,6 @@
   line-height: 44px;
   color: #475666;
   font-weight: 400;
-
-
 }
 .heading-h4 {
   font-family: "Poppins", sans-serif;
@@ -226,7 +224,7 @@
   line-height: 44px;
   color: #475666;
 }
-.heading-h3{
+.heading-h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 25px;
@@ -234,7 +232,6 @@
   letter-spacing: 0;
   line-height: 44px;
   color: #475666;
-
 }
 .bullet-heading {
   font-family: "Poppins", sans-serif;
@@ -256,9 +253,6 @@
   font-size: 1.2em;
   line-height: 1;
 }
-
-
-
 
 /* Responsive */
 
@@ -308,6 +302,24 @@
 }
 
 @media (max-width: 768px) {
+  .appt-btn-service {
+    font-size: 15px;
+    padding: 1px 10px;
+  }
+
+  .call-btn-service {
+    font-size: 15px;
+    padding: 1px 10px;
+  }
+
+  .service-page-content > .heading-main {
+    font-size: 31px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .css-1xc3v61-indicatorContainer {
+    font-size: 15px !important;
+  }
   .service-page-content h2 {
     margin-top: 25px;
     font-size: 28px;
@@ -327,6 +339,12 @@
   .service-buttons {
     flex-direction: column;
     gap: 10px;
+  }
+  .bullet-heading {
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
   }
 }
 

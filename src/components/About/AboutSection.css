@@ -73,7 +73,7 @@
 }
 .about-content > .about-subheading {
   margin-top: 30px;
-  font-family: "Shiponi Minco B1", sans-serif;
+  font-family: "Shippori Mincho B1", sans-serif;
   font-weight: 400;
   font-size: 44px;
   line-height: 100%;
@@ -101,39 +101,36 @@
   text-decoration: none;
 }
 
-.call-button-about{
- 
- 
-    flex: 1 1;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 19px;
-    padding: 11px 10px;
-    background-color: #818992;
-    color: white;
-    border: none;
-    cursor: pointer;
-    line-height: 39px;
-    /* margin: 20px 20px 0 0; */
-    justify-content: center;
-    text-align: center;
+.call-button-about {
+  flex: 1 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 19px;
+  padding: 11px 10px;
+  background-color: #818992;
+  color: white;
+  border: none;
+  cursor: pointer;
+  line-height: 39px;
+  /* margin: 20px 20px 0 0; */
+  justify-content: center;
+  text-align: center;
 }
 
 .appointment-button-about {
-     flex: 1 1;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 19px;
-    padding: 11px 10px;
-    background-color: #505E5D;
-    color: white;
-    border: none;
-    cursor: pointer;
-    line-height: 39px;
-    /* margin: 20px 20px 0 0; */
-    justify-content: center;
-    text-align: center;
-
+  flex: 1 1;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 19px;
+  padding: 11px 10px;
+  background-color: #505e5d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  line-height: 39px;
+  /* margin: 20px 20px 0 0; */
+  justify-content: center;
+  text-align: center;
 }
 
 .appointment-button-about {
@@ -223,16 +220,15 @@
 
 /* Responsive layout */
 
-
-@media(min-width:1024px) and (max-width: 1147px) {
-  .about-buttons{
+@media (min-width: 1024px) and (max-width: 1147px) {
+  .about-buttons {
     flex-direction: column;
     align-items: stretch;
     gap: 15px; /* spacing between buttons */
   }
 
   .call-button-about,
-  .appointment-button-about{
+  .appointment-button-about {
     height: auto; /* remove unnecessary fixed height */
     padding: 12px 20px;
     font-size: 18px;
@@ -241,8 +237,7 @@
     margin: 0 auto; /* center buttons */
     box-sizing: border-box;
   }
-  }
-
+}
 
 @media (max-width: 1024px) {
   .about-content h2 {
@@ -290,8 +285,8 @@
     display: block;
     margin: 36px auto;
     /* text-align: center; */
-    margin-bottom: 20px;
-    font-size: 20px;
+    margin-bottom: 17px;
+    font-size: 25px;
   }
 
   .about-section {
@@ -322,6 +317,11 @@
   .quote-author {
     font-size: 12px;
   }
+  .quote-box {
+    height: auto;
+    padding: 16px;
+    margin-top: 30px;
+  }
 
   .about-buttons {
     flex-direction: column;
@@ -331,7 +331,17 @@
   .call-button-about,
   .appointment-button-about {
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .css-7crn4c-singleValue {
+    font-size: 18px !important;
+  }
+
+  .appointment-button-about {
+    padding: 1px 10px;
+  }
+  .call-button-about {
+    padding: 1px 10px;
   }
 }
 
@@ -343,7 +353,7 @@
   .about-content p {
     font-size: 16px;
     line-height: 28px;
-    margin-top: 30px;
+    margin-top: 18px;
   }
 
   .about-sidebar li {
@@ -354,6 +364,7 @@
   .quote-box {
     height: auto;
     padding: 16px;
+    margin-top: 30px;
   }
 
   .office-image {

@@ -141,6 +141,10 @@
   }
 }
 @media (max-width: 480px) {
+  .patient-experience-section {
+  padding: 27px 20px;
+
+}
   .patient-experience-heading {
     padding: 0px 111px;
   }
