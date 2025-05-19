@@ -15,7 +15,7 @@ const Contact = () => {
     <>
       <Hero
         image={heroImages[selectedTab] || ImageAssets.contactImage}
-        heading="Contact Us"
+        // heading="Contact Us"
         showButton={false}
       />
       <ContactSection

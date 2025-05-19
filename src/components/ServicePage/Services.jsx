@@ -1,12 +1,13 @@
 // @ts-nocheck
 
-// import React, { useEffect, useState } from "react";
 import Select, { components } from "react-select";
 import { FaChevronDown } from "react-icons/fa";
 import "./Services.css";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import serviceData from "../../data/serviceData";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 
 const DropdownIndicator = (props) => {
   const { menuIsOpen } = props.selectProps;
@@ -22,8 +23,6 @@ const DropdownIndicator = (props) => {
     </components.DropdownIndicator>
   );
 };
-
-
 
 const ServiceSection = ({ selectedTab, setSelectedTab }) => {
   const tabs = Object.keys(serviceData);
@@ -42,120 +41,141 @@ const ServiceSection = ({ selectedTab, setSelectedTab }) => {
     label: tab,
   }));
 
-  return (
-    
-      <div className="service-page-wrapper">
-        <aside className="service-page-sidebar">
-          {isMobile ? (
-            <div className="service-dropdown-container">
-              <Select
-                isSearchable={false}
-                value={{ value: selectedTab, label: selectedTab }}
-                onChange={(opt) => setSelectedTab(opt.value)}
-                options={selectOptions}
-                components={{ DropdownIndicator }}
-                menuIsOpen={menuIsOpen}
-                onMenuOpen={() => setMenuIsOpen(true)}
-                onMenuClose={() => setMenuIsOpen(false)}
-                styles={{
-                  control: (base, state) => ({
-                    ...base,
-                    fontSize: "20px",
-                    backgroundColor: "#2d3e50",
-                    borderColor: state.isFocused ? "#fff" : "#ccc",
-                    boxShadow: "none",
-                    color: "#fff",
-                    "&:hover": {
-                      borderColor: "#fff",
-                    },
-                  }),
-                  singleValue: (base) => ({
-                    ...base,
-                    color: "#fff",
-                  }),
-                  menu: (base) => ({
-                    ...base,
-                    backgroundColor: "#fff",
-                  }),
-                  option: (base, state) => ({
-                    ...base,
-                    backgroundColor: state.isFocused ? "#405468" : "#fff",
-                    color: state.isFocused ? "#fff" : "#000",
-                    fontSize: "18px",
-                    padding: "10px 15px",
-                    fontFamily: "Poppins, sans-serif",
-                    "&:active": {
-                      backgroundColor: "#405468",
-                    },
-                  }),
-                }}
-              />
-            </div>
-          ) : (
-            <ul>
-              {tabs.map((tab, index) =>
-                index === 0 ? (
-                  <h3 key={tab} className="service-page-title">
-                    {tab}
-                  </h3>
-                ) : (
-                  <li
-                    key={tab}
-                    className={selectedTab === tab ? "active" : ""}
-                    onClick={() => setSelectedTab(tab)}
-                  >
-                    {tab}
-                  </li>
-                )
-              )}
-            </ul>
-          )}
-        </aside>
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
-        <section className="service-page-content">
-          <h2>{selectedTab}</h2>
-          {content.main && <p>{content.main}</p>}
-          {content.sections?.map((section, index) => (
-            <div key={index} className="service-section">
-              <h3 className="heading-h3">{section.heading}</h3>
-              {section.content && <p>{section.content}</p>}
-              {section.items?.map((item, idx) => (
-                <div key={idx}>
-                  <h4
-                    className={item.hasBullet ? "bullet-heading" : "heading-h4"}
+  const toggleFaq = (index) => {
+    setOpenFaqIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  return (
+    <div className="service-page-wrapper">
+      <aside className="service-page-sidebar">
+        {isMobile ? (
+          <div className="service-dropdown-container">
+            <Select
+              isSearchable={false}
+              value={{ value: selectedTab, label: selectedTab }}
+              onChange={(opt) => setSelectedTab(opt.value)}
+              options={selectOptions}
+              components={{ DropdownIndicator }}
+              menuIsOpen={menuIsOpen}
+              onMenuOpen={() => setMenuIsOpen(true)}
+              onMenuClose={() => setMenuIsOpen(false)}
+              styles={{
+                control: (base, state) => ({
+                  ...base,
+                  fontSize: "20px",
+                  backgroundColor: "#2d3e50",
+                  borderColor: state.isFocused ? "#fff" : "#ccc",
+                  boxShadow: "none",
+                  color: "#fff",
+                  "&:hover": {
+                    borderColor: "#fff",
+                  },
+                }),
+                singleValue: (base) => ({
+                  ...base,
+                  color: "#fff",
+                }),
+                menu: (base) => ({
+                  ...base,
+                  backgroundColor: "#fff",
+                }),
+                option: (base, state) => ({
+                  ...base,
+                  backgroundColor: state.isFocused ? "#405468" : "#fff",
+                  color: state.isFocused ? "#fff" : "#000",
+                  fontSize: "18px",
+                  padding: "10px 15px",
+                  fontFamily: "Poppins, sans-serif",
+                  "&:active": {
+                    backgroundColor: "#405468",
+                  },
+                }),
+              }}
+            />
+          </div>
+        ) : (
+          <ul>
+            {tabs.map((tab, index) =>
+              index === 0 ? (
+                <h3 key={tab} className="service-page-title">
+                  {tab}
+                </h3>
+              ) : (
+                <li
+                  key={tab}
+                  className={selectedTab === tab ? "active" : ""}
+                  onClick={() => setSelectedTab(tab)}
+                >
+                  {tab}
+                </li>
+              )
+            )}
+          </ul>
+        )}
+      </aside>
+
+      <section className="service-page-content">
+        <p className="heading-main">{selectedTab}</p>
+        {content.main && <p>{content.main}</p>}
+        {content.sections?.map((section, index) => (
+          <div key={index} className="service-section">
+            <h3 className="heading-h3">{section.heading}</h3>
+            {section.content && <p>{section.content}</p>}
+            {section.items?.map((item, idx) => (
+              <div key={idx}>
+                <h4
+                  className={item.hasBullet ? "bullet-heading" : "heading-h4"}
+                >
+                  {item.title}
+                </h4>
+                <p >{item.content}</p>
+              </div>
+            ))}
+            {Array.isArray(section.faqs) &&
+              section.faqs.length > 0 &&
+              section.faqs.map((faq, qIdx) => (
+                <div key={qIdx} className="faq-item">
+                  <div
+                    className="faq-question"
+                    onClick={() =>
+                      setOpenFaqIndex((prev) =>
+                        prev === `${index}-${qIdx}` ? null : `${index}-${qIdx}`
+                      )
+                    }
                   >
-                    {item.title}
-                  </h4>
-                  <p>{item.content}</p>
+                    <div>
+                      {openFaqIndex === `${index}-${qIdx}` ? (
+                        <RemoveCircleOutlineIcon sx={{ color: "#7A7979" }} />
+                      ) : (
+                        <AddCircleOutlineIcon sx={{ color: "#7A7979" }} />
+                      )}
+                    </div>
+
+                    <p>{faq.question}</p>
+                  </div>
+                  {openFaqIndex === `${index}-${qIdx}` && (
+                    <div >
+                      <p style={{color:"#373636"}}>{faq.answer}</p>
+                    </div>
+                  )}
+                  {qIdx < section.faqs.length - 1 && <hr />}
                 </div>
               ))}
-              {section.faqs && (
-                <div className="faq-block">
-                  {section.faqs.map((question, qIdx) => (
-                    <div key={qIdx}>
-                      <div className="faq-question">
-                        <div className="faq-icon">+</div>
-                        <p>{question}</p>
-                      </div>
-                      {qIdx < section.faqs.length - 1 && <hr />}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-          
-          <div className="service-buttons">
-            <a href="tel:8454217040" className="call-btn-service">
-              CALL 845-421-7040
-            </a>
-            <Link to="/contact" className="appt-btn-service">
-              REQUEST AN APPOINTMENT
-            </Link>
           </div>
-        </section>
-      </div>
-    
+        ))}
+
+        <div className="service-buttons">
+          <a href="tel:8454217040" className="call-btn-service">
+            CALL 845-421-7040
+          </a>
+          <Link to="/contact" className="appt-btn-service">
+            REQUEST AN APPOINTMENT
+          </Link>
+        </div>
+      </section>
+    </div>
   );
 };
 

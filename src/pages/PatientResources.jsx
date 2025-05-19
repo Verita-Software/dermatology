@@ -45,13 +45,13 @@ const CareResources = () => {
     <>
       <Hero
         image={heroImages[selectedTab]}
-        heading={
-          <>
-            <span>PATIENT</span>
-            <br />
-            <span>RESOURCES</span>
-          </>
-        }
+        // heading={
+        //   <>
+        //     <span>PATIENT</span>
+        //     <br />
+        //     <span>RESOURCES</span>
+        //   </>
+        // }
         showButton={false}
       />
       <CareResourcesSection

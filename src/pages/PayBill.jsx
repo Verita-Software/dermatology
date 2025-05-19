@@ -10,7 +10,7 @@ const PayBill = () => {
     <>
       <Hero
         image={ImageAssets.payBillImage}
-        heading="PAY BILL"
+        // heading="PAY BILL"
         showButton={false}
       />
 

@@ -55,7 +55,7 @@ const About = () => {
     <>
       <Hero
         image={heroImages[selectedSection] || ImageAssets.aboutImage1}
-        heading="ABOUT US"
+        // heading="ABOUT US"
         // heading="ABOUT US"
         showButton={false}
       />

@@ -45,7 +45,7 @@ const ServicePage = () => {
     <>
       <Hero
         image={heroImages[selectedTab] || ImageAssets.heroSkinCare}
-        heading={selectedTab}
+        // heading={selectedTab}
         showButton={false}
       />
       <ServiceSection selectedTab={selectedTab} setSelectedTab={setSelectedTab} />

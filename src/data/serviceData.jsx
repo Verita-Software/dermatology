@@ -13,17 +13,17 @@ const serviceData = {
         content: "",
         items: [
           {
-            title: "Personalized Plans –",
+            title: "Personalized Plans :",
             content:
               "Every treatment is tailored to your unique features and goals.",
             hasBullet: true,
           },
           {
-            title: "Natural-Looking Results –",
+            title: "Natural-Looking Results :",
             content: "We focus on subtle enhancements, not drastic changes.",
           },
           {
-            title: "Expert Care –",
+            title: "Expert Care :",
             content:
               "All services are performed by skilled, medically trained professionals.",
           },
@@ -34,17 +34,17 @@ const serviceData = {
         content: "",
         items: [
           {
-            title: "Anti-Wrinkle Injections –",
+            title: "Anti-Wrinkle Injections :",
             content: "Smooth fine lines and soften expression lines.",
             hasBullet: true,
           },
           {
-            title: "Dermal Fillers –",
+            title: "Dermal Fillers :",
             content: "Restore volume and enhance facial contours.",
             hasBullet: true,
           },
           {
-            title: "Skin Boosters –",
+            title: "Skin Boosters :",
             content: " Deep hydration for improved skin texture and glow",
             hasBullet: true,
           },
@@ -61,19 +61,19 @@ const serviceData = {
           "Choosing the right skin clinic makes all the difference in your acne journey. Here’s why patients trust us:",
         items: [
           {
-            title: "Experienced, Medically Trained Professionals –",
+            title: "Experienced, Medically Trained Professionals :",
             content:
               " Our team has the expertise and knowledge to deliver safe, effective treatments with precision.",
             hasBullet: true,
           },
           {
-            title: "Personalized Treatment Plans –",
+            title: "Personalized Treatment Plans :",
             content:
               "We customize every plan to suit your unique features and aesthetic goals.",
             hasBullet: true,
           },
           {
-            title: "Natural Balanced Results –",
+            title: "Natural Balanced Results :",
             content:
               "Enhancements that refresh your look without appearing overdone or artificial.",
             hasBullet: true,
@@ -82,7 +82,20 @@ const serviceData = {
       },
       {
         heading: "FAQ's",
-        faqs: ["", "", ""],
+       faqs: [
+          {
+            question: "What is cosmetic dermatology?",
+            answer: "Cosmetic dermatology involves non-surgical treatments to enhance skin appearance, reduce signs of aging, and improve skin tone, texture, and clarity. ",
+          },
+          {
+            question: "Are the treatments safe?",
+            answer: "Yes, when performed by qualified professionals using FDA-approved products and techniques, cosmetic treatments are safe and effective with minimal risk.",
+          },
+          {
+            question: "Is there any downtime after treatment?",
+            answer: "Most treatments have little to no downtime. Some may cause mild redness or swelling, which typically resolves within a few hours to days.",
+          },
+        ],
       },
     ],
   },
@@ -115,18 +128,18 @@ const serviceData = {
         content: "",
         items: [
           {
-            title: "Laser Rejuvenation –",
+            title: "Laser Rejuvenation :",
             content:
               "Reduces fine lines, pigmentation, and enhances skin texture.",
             hasBullet: true,
           },
           {
-            title: "Microneedling – ",
+            title: "Microneedling : ",
             content: "Stimulates collagen and smooths out acne scars.",
             hasBullet: true,
           },
           {
-            title: "HydraFacial –",
+            title: "HydraFacial :",
             content:
               "Deeply hydrates and detoxifies, leaving your skin instantly radiant.",
             hasBullet: true,
@@ -143,17 +156,17 @@ const serviceData = {
         content: "",
         items: [
           {
-            title: "Certified Experts –",
+            title: "Certified Experts :",
             content: "Experienced dermatologists ensure safe, expert care.",
             hasBullet: true,
           },
           {
-            title: " Cutting-Edge Technology –",
+            title: " Cutting-Edge Technology :",
             content: "Non-invasive, effective, and up-to-date treatments.",
             hasBullet: true,
           },
           {
-            title: "Clear Pricing –",
+            title: "Clear Pricing :",
             content: "Honest packages with no surprises.",
             hasBullet: true,
           },
@@ -161,10 +174,19 @@ const serviceData = {
       },
       {
         heading: "FAQ's",
-        faqs: [
-          "How Long does it takes to see the results?",
-          "Are the treatments painful?",
-          "Will acne comeback after the treatment?",
+       faqs: [
+          {
+            question: "Is skin rejuvenation painful?",
+            answer: "Most treatments cause minimal discomfort.Numbing creams or cooling methods are used to keep you comfortable.",
+          },
+          {
+            question: " How soon can I expect visible results?",
+            answer: "You may notice improvements in a few days, with full results developing over a few weeks as collagen builds.",
+          },
+          {
+            question: " 3. Will I need multiple sessions",
+            answer: " Often, yes. The number of sessions depends on your skin concerns and treatment type, which we’ll discuss during your consultation.",
+          },
         ],
       },
     ],
@@ -261,9 +283,18 @@ const serviceData = {
       {
         heading: "FAQ's",
         faqs: [
-          "Are injectables painful?",
-          "How long do results last?",
-          "When will I see results?",
+          {
+            question: "Are injectables painful?",
+            answer: "Most feel only slight discomfort. Numbing cream can be used for added comfort.",
+          },
+          {
+            question: "How long do results last?",
+            answer: "Anti-wrinkle results last 3–4 months; fillers can last 6–18 months depending on the area.",
+          },
+          {
+            question: "When will I see results?",
+            answer: "Wrinkle treatments show in 3–7 days. Fillers give immediate visible results.",
+          },
         ],
       },
     ],
@@ -277,17 +308,17 @@ const serviceData = {
           "We believe in treating acne from the inside out with a personalized, results-driven approach. Here's what you can expect when you begin your journey with us:",
         items: [
           {
-            title: "One-on-One Consultation",
+            title: "One-on-One Consultation :",
             content:
               "A thorough skin analysis and discussion with an expert dermatologist to understand your acne type, triggers, and skin goals.",
           },
           {
-            title: "Customized Treatment Plans",
+            title: "Customized Treatment Plans :",
             content:
               "Tailored solutions designed specifically for your skin type and acne severity—no one-size-fits-all approach.",
           },
           {
-            title: " Medical-Grade Skincare Routines",
+            title: " Medical-Grade Skincare Routines :",
             content:
               "Safe, dermatologist-recommended products to support and maintain treatment results at home.",
           },
@@ -299,19 +330,19 @@ const serviceData = {
           "We provide a comprehensive range of evidence-based treatments tailored to different acne types and skin conditions:",
         items: [
           {
-            title: "Chemical Peels",
+            title: "Chemical Peels :",
             content:
               "Gently exfoliate dead skin cells, unclog pores, and reduce inflammation to improve overall skin texture.",
             hasBullet: true,
           },
           {
-            title: "Laser and Light Therapy",
+            title: "Laser and Light Therapy :",
             content:
               "Target and destroy acne-causing bacteria while promoting faster healing and reducing redness.",
             hasBullet: true,
           },
           {
-            title: "Scar Treatments",
+            title: "Scar Treatments :",
             content:
               "Microneedling, laser resurfacing, and other advanced techniques to fade post-acne marks and improve skin smoothness.",
             hasBullet: true,
@@ -329,19 +360,19 @@ const serviceData = {
           "Choosing the right skin clinic makes all the difference in your acne journey. Here’s why patients trust us:",
         items: [
           {
-            title: "Certified Dermatologists",
+            title: "Certified Dermatologists :",
             content:
               "Our team includes board-certified skin specialists with extensive experience in diagnosing and treating all types of acne.",
             hasBullet: true,
           },
           {
-            title: "Advanced Technology & FDA-Approved Equipment",
+            title: "Advanced Technology & FDA-Approved Equipment :",
             content:
               "We use the latest, clinically proven tools and techniques for safe, effective, and faster results.",
             hasBullet: true,
           },
           {
-            title: "Transparent Pricing & Honest Guidance",
+            title: "Transparent Pricing & Honest Guidance :",
             content:
               "No hidden costs, no pushy sales—just clear communication and expert advice every step of the way.",
             hasBullet: true,
@@ -350,10 +381,19 @@ const serviceData = {
       },
       {
         heading: "FAQ's",
-        faqs: [
-          "How Long does it takes to see the results?",
-          "Are the treatments painful?",
-          "Will acne comeback after the treatment?",
+       faqs: [
+          {
+            question: "Are injectables painful?",
+            answer: "You may feel a small pinch, but we offer numbing cream to make the process comfortable.",
+          },
+          {
+            question: "How long do results last?",
+            answer: "Depending on the injectable, results can last from 6 months to 2 years.",
+          },
+          {
+            question: "When will I see results?",
+            answer: "Some injectables show instant results, while others develop over a few days to weeks.",
+          },
         ],
       },
     ],
@@ -363,33 +403,21 @@ const serviceData = {
 export default serviceData;
 
 
-//  
-// Expert Providers: 
-
-//  We assess your needs and create a tailored treatment plan.
-
-// High-Quality Products: We use only FDA-approved injectables to ensure safety and effectiveness.
-
-// Comfort & Care: We use gentle techniques and offer numbing options for a smooth, comfortable experience.
-
-// Skin Rejuvenation Injectables
-
-// Skin Boosters: Ultra-hydrating injections that improve skin elasticity, tone, and texture.
-
-// Biostimulators: Products like Sculptra® or Radiesse® that stimulate collagen production over time for long-lasting firming and smoothing.
-
-// Mesotherapy: A customized cocktail of vitamins, antioxidants, and hyaluronic acid micro-injected to nourish and revitalize the skin.
-
-// Before & After Results
-
-// See the difference expert care can make. Our before & after results showcase the subtle yet powerful transformations achieved with our injectable treatments.
 
 
+// 1. Is skin rejuvenation painful?  Most treatments cause minimal discomfort.
+//  Numbing creams or cooling methods are used to
+//  keep you comfortable.
+// 2. How soon can I expect visible results?  You may notice improvements in a few days, with
+//  full results developing over a few weeks as collagen builds.
+// 3. Will I need multiple sessions?  Often, yes. The number of sessions depends on 
+// your skin concerns and treatment type, which we’ll discuss
+//  during your consultation.
 
-// Why Choose Us for Skin  Injectables?
 
-// Expertise You Can Trust Our team consists of medically trained injectors with advanced knowledge of facial anatomy and years of experience in delivering safe, precise treatments.
-
-// Natural-Looking Results We specialize in subtle enhancements that refresh your appearance without changing who you are. Our goal is always to help you look rested, radiant, and naturally confident.
-
-// Tailored Treatment Plans  No two faces are the same. That’s why we create customized injectable plans based on your unique features, skin type, and aesthetic goals.
+// Are injectables painful?
+// Most feel only slight discomfort. Numbing cream can be used for added comfort.
+// How long do results last?
+// Anti-wrinkle results last 3–4 months; fillers can last 6–18 months depending on the area.
+// When will I see results?
+// Wrinkle treatments show in 3–7 days. Fillers give immediate visible results.

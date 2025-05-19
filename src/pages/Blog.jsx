@@ -9,7 +9,7 @@ const Blog = () => {
     <>
       <Hero
         image={ImageAssets.blogBanner}
-        heading="BLOGS"
+        // heading="BLOGS"
         subheading="WE CARE YOUR SKIN"
         showButton={false}
       />

@@ -37,13 +37,13 @@ const BeforeAfter = () => {
     <>
       <Hero
         image={ImageAssets.beforeandafter}
-        heading={
-          <>
-            <span>Before and</span>
-            <br />
-            <span>after</span>
-          </>
-        }
+        // heading={
+        //   <>
+        //     <span>Before and</span>
+        //     <br />
+        //     <span>after</span>
+        //   </>
+        // }
         showButton={false}
       />
       <BeforeAfterSection
