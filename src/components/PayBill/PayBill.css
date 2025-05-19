@@ -104,6 +104,16 @@ button[type="submit"] {
 .billing-info >.address-2-adjusting{
   margin-top: 67px;
 }
+.submit-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+}
+.submit-button-wrapper> button{
+width: 30%;
+}
+
 
 /* Tablet view */
 @media (max-width: 1024px) {

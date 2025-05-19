@@ -21,7 +21,7 @@ const Sidebar = ({ isMenuOpen, toggleMenu }) => {
             <li><NavLink to="/" end onClick={toggleMenu}>HOME</NavLink></li>
             <li><NavLink to="/about-us" onClick={toggleMenu}>ABOUT US</NavLink></li>
             <li><NavLink to="/services" onClick={toggleMenu}>SERVICES</NavLink></li>
-            <li><NavLink to="/care-resources" onClick={toggleMenu}>PATIENT RESOURCES</NavLink></li>
+            <li><NavLink to="/patient-resources" onClick={toggleMenu}>PATIENT RESOURCES</NavLink></li>
             <li><NavLink to="/pay-bill" onClick={toggleMenu}>PAY BILL</NavLink></li>
             <li><NavLink to="/before-after" onClick={toggleMenu}>BEFORE & AFTER</NavLink></li>
             <li><NavLink to="/blog" onClick={toggleMenu}>BLOG</NavLink></li>

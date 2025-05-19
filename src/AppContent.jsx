@@ -11,6 +11,8 @@ import Blog from "./pages/Blog";
 import BeforeAfter from "./pages/BeforeAfter";
 import Contact from "./pages/Contact";
 import ServicePage from "./pages/ServicePage";
+import BlogDetail from "./pages/BlogDetail";
+
 
 const AppContent = ({ isMenuOpen, toggleMenu }) => {
   const location = useLocation();
@@ -32,9 +34,11 @@ const AppContent = ({ isMenuOpen, toggleMenu }) => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about-us/:sectionSlug?" element={<About />} />
-              <Route path="/care-resources/:careSlug?" element={<CareResources />} />
+              <Route path="/patient-resources/:careSlug?" element={<CareResources />} />
               <Route path="/pay-bill" element={<PayBill />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blogs/:slug" element={<BlogDetail />} />
+
               <Route path="/before-after/:sectionSlug?" element={<BeforeAfter />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/services/:serviceSlug?" element={<ServicePage />} />

@@ -1,0 +1,117 @@
+.blog-detail-container ul {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.blog-detail-container li {
+  margin-bottom: 1.5rem;
+}
+
+.blog-detail-container h1 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-detail-container h3 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+
+.blog-detail-container {
+  padding: 40px;
+  max-width: 1160px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.8;
+  color: #333;
+}
+
+.blog-detail-container p {
+      font-size: 24px;
+    margin-bottom: 56px;
+    font-weight: 400;
+    line-height: 32px;
+
+}
+
+.blog-detail-container h1 {
+  font-size: 28px;
+  margin: 2rem 0 1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.blog-detail-container h2 {
+      font-size: 38px;
+    color: #005b7f;
+    margin-bottom: 1rem;
+    font-weight: 500;
+
+}
+
+.blog-detail-container h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.blog-detail-container h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  color: #444;
+}
+
+.blog-detail-container ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-detail-container li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-detail-container li strong {
+  font-weight: 600;
+  color: #222;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap; /* Optional: helps on small screens */
+}
+
+.blog-title {
+  font-size: 26px;
+  color: #005b7f;
+  flex: 1;
+  margin: 0;
+}
+
+.blog-date {
+  color: #888;
+  font-size: 18px;
+  white-space: nowrap;
+  margin: 0;
+}
+.no-bullets {
+  list-style: none !important;
+  
+}
+@media (max-width: 600px) {
+  .blog-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+

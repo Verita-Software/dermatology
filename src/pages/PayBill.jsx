@@ -8,7 +8,11 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const PayBill = () => {
   return (
     <>
-      <Hero image={ImageAssets.payBillImage} heading="PAY BILL" showButton={false} />
+      <Hero
+        image={ImageAssets.payBillImage}
+        heading="PAY BILL"
+        showButton={false}
+      />
 
       <div className="paybill-form-wrapper">
         <p>Pay Bill</p>
@@ -62,10 +66,22 @@ const PayBill = () => {
               </div>
 
               <div className="card-icons">
-                <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" />
-                <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="MasterCard" />
-                <img src="https://img.icons8.com/color/48/000000/discover.png" alt="Discover" />
-                <img src="https://img.icons8.com/color/48/000000/amex.png" alt="American Express" />
+                <img
+                  src="https://img.icons8.com/color/48/000000/visa.png"
+                  alt="Visa"
+                />
+                <img
+                  src="https://img.icons8.com/color/48/000000/mastercard.png"
+                  alt="MasterCard"
+                />
+                <img
+                  src="https://img.icons8.com/color/48/000000/discover.png"
+                  alt="Discover"
+                />
+                <img
+                  src="https://img.icons8.com/color/48/000000/amex.png"
+                  alt="American Express"
+                />
               </div>
 
               <div className="form-group">
@@ -80,11 +96,6 @@ const PayBill = () => {
 
               <div className="form-group">
                 <label>Country</label>
-                <input type="text" />
-              </div>
-
-              <div className="form-group">
-                <label>Phone</label>
                 <input type="text" />
               </div>
             </div>
@@ -108,27 +119,28 @@ const PayBill = () => {
               </div>
 
               <div className="form-group">
-                <label>Address 1</label>
-                <input type="text" />
-              </div>
-
-              <div className="form-group address-2-adjusting">
                 <label>Address 2</label>
                 <input type="text" />
               </div>
 
-              <div className="form-group">
+              <div className="form-group address-2-adjusting">
                 <label>Zip/Postal Code</label>
                 <input type="text" />
               </div>
 
               <div className="form-group">
                 <label>Email Address</label>
-                <input type="email" />
+                <input type="text" />
               </div>
 
-              <button type="submit">Submit Payment</button>
+              <div className="form-group">
+                <label>Phone</label>
+                <input type="email" />
+              </div>
             </div>
+          </div>
+          <div className="submit-button-wrapper">
+            <button type="submit">Submit Payment</button>
           </div>
         </form>
       </div>
@@ -138,9 +150,7 @@ const PayBill = () => {
   );
 };
 
-export default PayBill;
-
-
+export default PayBill;
 
 // import React from "react";
 // import Hero from "../components/common/Hero/Hero";
@@ -260,11 +270,10 @@ export default PayBill;
 
 // export default PayBill;
 
-
 // import React from "react";
 // import Hero from "../components/Hero";
 // import Footer from "../components/Footer";
-// import "./PayBill.css"; 
+// import "./PayBill.css";
 // import ImageAssets from "../components/ImageAssets";
 
 // const PayBill = () => {

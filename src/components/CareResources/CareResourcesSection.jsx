@@ -13,11 +13,11 @@ const careResourcesData = {
 Read some of their reviews and see how Dr. Alicia Natalizio and our team make a difference.`,
     ],
     officeHours: [
-      "Monday – 8:30am – 6pm",
-      "Tuesday – 8:30am – 4:30pm",
-      "Wednesday – 8:30am – 4:30pm",
-      "Thursday – 8:30am – 6pm",
-      "Friday – 8:30am – 3:30pm",
+      "Monday – 8:00am – 4:00pm",
+      "Tuesday – Closed",
+      "Wednesday – 9:00am – 4:00pm",
+      "Thursday – 8:00am – 4:00pm",
+      "Friday – 8:00am – 1:00pm",
       "Saturday and Sunday – Closed",
     ],
   },
@@ -99,7 +99,7 @@ const CareResourcesSection = ({ selectedTab, setSelectedTab }) => {
     <div className="care-section">
       {isMobile ? (
         <div className="care-dropdown-container">
-          <div className="sidebar-heading">Care Resources</div>
+          <div className="sidebar-heading">Patient Resources</div>
           <Select
             isSearchable={false}
             className="care-dropdown"
@@ -151,7 +151,7 @@ const CareResourcesSection = ({ selectedTab, setSelectedTab }) => {
             selectedTab === "Pay Bill" ? "" : "sticky-sidebar"
           } ${isFooterVisible ? "stop-sticky" : ""}`}
         >
-          <div className="sidebar-heading">Care Resources</div>
+          <div className="sidebar-heading">Patient Resources</div>
           <ul>
             {sections.map((section) => (
               <li
@@ -207,8 +207,6 @@ const CareResourcesSection = ({ selectedTab, setSelectedTab }) => {
 };
 
 export default CareResourcesSection;
-
-
 
 
 

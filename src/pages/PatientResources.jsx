@@ -30,7 +30,7 @@ const CareResources = () => {
   useEffect(() => {
     const slug = reverseTabSlugMap[selectedTab];
     if (slug && slug !== tabSlug) {
-      navigate(`/care-resources/${slug}`, { replace: true });
+      navigate(`/patient-resources/${slug}`, { replace: true });
     }
   }, [selectedTab]);
 

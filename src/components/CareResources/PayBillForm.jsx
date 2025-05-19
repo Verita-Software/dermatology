@@ -1,5 +1,5 @@
 import React from "react";
-import './PayBillForm.css'
+import "./PayBillForm.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const PayBillForm = () => {
@@ -63,8 +63,8 @@ const PayBillForm = () => {
           <input type="text" />
           <label>Country</label>
           <input type="text" />
-          <label>Phone</label>
-          <input type="text" />
+          {/* <label>Phone</label>
+          <input type="text" /> */}
         </div>
 
         <div className="paybill-half">
@@ -75,36 +75,27 @@ const PayBillForm = () => {
           <input type="text" />
           <label>Address 1</label>
           <input type="text" />
-          <label>Address 1</label>
+          <label>Address 2</label>
           <input type="text" />
-          <label className="address-2-adjust">Address 2</label>
-          <input  type="text" />
-          <label>Zip/Postal Code</label>
+          <label className="address-2-adjust">Zip/Postal Code</label>
           <input type="text" />
           <label>Email Address</label>
-          <input type="email" />
-          <button className="__button-form" style={{marginTop:"120px"}} type="submit" >Submit Payment</button>
+          <input type="text" />
+          <label>Phone</label>
+          <input type="text" />
         </div>
       </div>
+         <div className="paybill-button-wrapper">
+  <button className="__button-form" type="submit">
+    Submit Payment
+  </button>
+</div>
+
     </div>
   );
 };
 
 export default PayBillForm;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React from "react";
 // import "./PayBillForm.css";
