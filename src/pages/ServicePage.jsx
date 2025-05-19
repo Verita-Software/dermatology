@@ -35,7 +35,7 @@ const ServicePage = () => {
   }, [selectedTab]);
 
   const heroImages = {
-    "Cosmetic Services": ImageAssets.service1,
+    "Cosmetic Services": ImageAssets.service5,
     "Skin Rejuvenation": ImageAssets.service2,
     "Injectables": ImageAssets.service3,
     "Acne Treatment": ImageAssets.service4,

@@ -117,19 +117,19 @@ const ServiceSection = ({ selectedTab, setSelectedTab }) => {
       </aside>
 
       <section className="service-page-content">
-        <p className="heading-main">{selectedTab}</p>
+        <h1 className="heading-main">{selectedTab}</h1>
         {content.main && <p>{content.main}</p>}
         {content.sections?.map((section, index) => (
           <div key={index} className="service-section">
-            <h3 className="heading-h3">{section.heading}</h3>
+            <h2 className="heading-h2">{section.heading}</h2>
             {section.content && <p>{section.content}</p>}
             {section.items?.map((item, idx) => (
               <div key={idx}>
-                <h4
-                  className={item.hasBullet ? "bullet-heading" : "heading-h4"}
+                <h3
+                  className={item.hasBullet ? "bullet-heading" : "heading-h3"}
                 >
                   {item.title}
-                </h4>
+                </h3>
                 <p >{item.content}</p>
               </div>
             ))}

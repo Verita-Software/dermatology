@@ -62,6 +62,7 @@
   line-height: 80px;
   color: #313942;
   margin-bottom: 20px;
+  font-weight: 100;
 }
 
 .service-page-subheading {
@@ -204,14 +205,17 @@
   margin: 0.8rem 0;
 }
 
-.heading-h3 {
+.heading-h2 {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+
   font-size: 30px;
   margin: 80px 0 0 0;
   letter-spacing: 0;
   line-height: 44px;
   color: #475666;
+  font-weight: 400;
+
+
 }
 .heading-h4 {
   font-family: "Poppins", sans-serif;
@@ -221,6 +225,16 @@
   letter-spacing: 0;
   line-height: 44px;
   color: #475666;
+}
+.heading-h3{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  margin: 20px 0;
+  letter-spacing: 0;
+  line-height: 44px;
+  color: #475666;
+
 }
 .bullet-heading {
   font-family: "Poppins", sans-serif;
