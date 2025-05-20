@@ -58,7 +58,7 @@
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #475666;
+  color: #000;
 }
 
 .blog-detail-container h4 {
@@ -67,7 +67,7 @@
   font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
-  color: #475666;
+  color: #000;
 }
 
 .blog-detail-container ul {
@@ -90,7 +90,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
-  gap: 1rem;
+  gap: 81px;
   flex-wrap: wrap; /* Optional: helps on small screens */
 }
 
