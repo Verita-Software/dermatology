@@ -41,12 +41,13 @@ import service3 from '../../assets/images/service3.jpg';
 import service4 from '../../assets/images/service4.jpg';
 import service5 from '../../assets/images/service5.jpg';
 import skinreju from '../../assets/images/skin-rej.png';
+import blog2Hero from '../../assets/images/blog2Hero.jpg'
 
 
 
 
 const ImageAssets={
-    logo,rejuvenatingImage,hamburgerIcon,drAlicaImage,drJulianaImage,drMikkilineni,crossIconSidebar,cosmeticServices,injectables,acneTreatment,Expert1,Expert2,aboutImage1,aboutJulianaCotler,aboutRadhaMikkilinen,officeImage1,officeImage2,officeImage3,officeImage4,careResourceImage,payBillImage,blogBanner,blog1,blog2,blog3,blog4,blog5,beforeAfterImg,beforeAfter1,beforeAfter2,beforeAfter3,beforAfter4,contactImage,posterImage,beforeandafter,aboutTest,aboutOffice,service1,service2,service3,service4,skinreju,service5
+    logo,rejuvenatingImage,hamburgerIcon,drAlicaImage,drJulianaImage,drMikkilineni,crossIconSidebar,cosmeticServices,injectables,acneTreatment,Expert1,Expert2,aboutImage1,aboutJulianaCotler,aboutRadhaMikkilinen,officeImage1,officeImage2,officeImage3,officeImage4,careResourceImage,payBillImage,blogBanner,blog1,blog2,blog3,blog4,blog5,beforeAfterImg,beforeAfter1,beforeAfter2,beforeAfter3,beforAfter4,contactImage,posterImage,beforeandafter,aboutTest,aboutOffice,service1,service2,service3,service4,skinreju,service5,blog2Hero
 };
 
 export default ImageAssets;

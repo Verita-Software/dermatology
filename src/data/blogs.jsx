@@ -1,7 +1,7 @@
 import ImageAssets from "../components/common/ImageAssets";
 
 const blogs = [
-  {slug: "blog-1",
+  {slug: "rosacea-understanding-causes",
     id: 1,
     title: "Rosacea Understanding Causes and Solutions with Dermatologist Expertise",
     date: "March 3, 2025",
@@ -20,7 +20,7 @@ const blogs = [
   },
   {
     id: 2,
-    slug: "blog-2",
+    slug: "early-stage-skin-cancer",
     title: "Early-Stage Skin Cancer: Could It Look Like a Rash?",
     date: "February 24, 2025",
     content: "Itchy skin, whether from dryness, allergies, or a minor irritation...",
@@ -36,20 +36,20 @@ const blogs = [
       conclusion: "See a dermatologist for any suspicious rash."
     }
   },
-   {slug: "blog-3",
+   {slug: "best-facial-treatment",
     title: "Best Facial Treatment for Your Age: Tailored Skincare Solutions Every Decade",
     date: "February 24, 2025",
     content: "As we age, our skin’s needs evolve, and so should our skincare routines...",
     image: ImageAssets.blog3,
   },
   {
-    slug: "blog-4",
+    slug: "how-to-get-rid-of-acne-extractions",
     title: "Acne Extractions: How to Get Rid of Pimples Safely with a Dermatologist",
     date: "February 24, 2025",
     content: "Acne is one of the most frustrating skin conditions, and breakouts can be very diffic...",
     image: ImageAssets.blog4,
   },
-  {slug: "blog-5",
+  {slug: "top-dermatologist-recommended-for-skincare",
     title: "Top Dermatologist-Recommended Skincare Tips for 2025",
     date: "February 22, 2025",
     content: "Stay ahead in skincare with these expert tips that keep your skin glowing all year round...",

@@ -17,7 +17,7 @@ import BlogDetail from "./pages/BlogDetail";
 const AppContent = ({ isMenuOpen, toggleMenu }) => {
   const location = useLocation();
   const isAboutPage = location.pathname === "/about";
-  const isBlogPage = location.pathname === "/blog";
+  const isBlogPage = location.pathname === "/blogs";
   const isContactPage = location.pathname === "/contact";
 
 
@@ -36,7 +36,7 @@ const AppContent = ({ isMenuOpen, toggleMenu }) => {
               <Route path="/about-us/:sectionSlug?" element={<About />} />
               <Route path="/patient-resources/:careSlug?" element={<CareResources />} />
               <Route path="/pay-bill" element={<PayBill />} />
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/blogs" element={<Blog />} />
               <Route path="/blogs/:slug" element={<BlogDetail />} />
 
               <Route path="/before-after/:sectionSlug?" element={<BeforeAfter />} />

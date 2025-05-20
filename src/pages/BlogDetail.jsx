@@ -7,7 +7,7 @@ import './BlogDetails.css'
 import Breadcrumbs from "../components/common/BreadCrumbs/BreadCrumbs";
 
 const blogs = [
-  { slug: "blog-1",
+  { slug: "rosacea-understanding-causes",
     title:
       "Rosacea Understanding Causes and Solutions with Dermatologist Expertise",
     date: "March 3, 2025",
@@ -16,7 +16,7 @@ const blogs = [
 
     image: ImageAssets.blog1,
   },
-  {slug: "blog-2",
+  {slug: "early-stage-skin-cancer",
     title: "Early-Stage Skin Cancer: Could It Look Like a Rash?",
     date: "February 24, 2025",
     content: (
@@ -108,7 +108,7 @@ const blogs = [
     image: ImageAssets.blog2,
   },
   {
-    slug: "blog-3",
+    slug: "best-facial-treatment",
     title:
       "Best Facial Treatment for Your Age: Tailored Skincare Solutions Every Decade",
     date: "February 24, 2025",
@@ -116,7 +116,7 @@ const blogs = [
       "As we age, our skin’s needs evolve, and so should our skincare routines...",
     image: ImageAssets.blog3,
   },
-  {slug: "blog-4",
+  {slug: "how-to-get-rid-of-acne-extractions",
     title:
       "Acne Extractions: How to Get Rid of Pimples Safely with a Dermatologist",
     date: "February 24, 2025",
@@ -124,7 +124,7 @@ const blogs = [
       "Acne is one of the most frustrating skin conditions, and breakouts can be very diffic...",
     image: ImageAssets.blog4,
   },
-  {slug: "blog-5",
+  {slug: "top-dermatologist-recommended-for-skincare",
     title: "Top Dermatologist-Recommended Skincare Tips for 2025",
     date: "February 22, 2025",
     content:
@@ -142,7 +142,12 @@ const blog = blogs.find((b) => b.slug === slug);
 
   return (
     <>
-      <Hero image={blog.image} showButton={false} />
+      {/* <Hero image={blog.image} showButton={false} /> */}
+      <Hero
+  image={slug === "early-stage-skin-cancer" ? ImageAssets.blog2Hero : blog.image}
+  showButton={false}
+/>
+
       <Breadcrumbs />
       <div className="blog-detail-container">
         <div className="blog-header">
