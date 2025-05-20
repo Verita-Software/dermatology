@@ -85,7 +85,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="map-link"
           >
-            <LocationOnIcon style={{ color: "blue", marginRight: 8,marginTop:"5px" }} />
+            <LocationOnIcon style={{ color: "blue", marginRight: 2,paddingTop:"8px" }} />
           </a>
           200 Ronald Reagan Blvd.
         </p>
