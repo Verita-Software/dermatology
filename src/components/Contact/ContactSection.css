@@ -305,7 +305,7 @@
   font-size: 17px;
   line-height: 100%;
   letter-spacing: 0%;
-  line-height: 50px;
+  line-height: 36px;
 }
 
 .signup-modal-align {
@@ -430,6 +430,29 @@ input[type="checkbox" i]
 {
   margin: 0 25px 0 0;
 }
+
+.terms-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.terms-container input[type="checkbox"] {
+  margin-top: 10px;
+  flex-shrink: 0;
+   width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  accent-color: #000;
+}
+
+.terms-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
  
 
 @media (max-width: 1024px) {
@@ -613,6 +636,9 @@ input[type="checkbox" i]
   .contact-sidebar ul {
     flex-direction: column;
     align-items: center;
+}
+.modal-content label {
+  font-size:13px ;
 }
 }
 

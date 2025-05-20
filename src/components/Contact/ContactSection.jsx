@@ -97,12 +97,13 @@ const ContactSection = () => {
                   <input type="email" placeholder="Email" />
                   <input type="password" placeholder="Password" />
                   <input type="password" placeholder="Confirm Password" />
-                  <label>
-                    <input type="checkbox" />I AGREE TO THE
-                    <Link to="#">TERMS OF SERVICE</Link> AND ACKNOWLEDGE THAT I
-                    UNDERSTAND THE
-                    <Link to="#">PRIVACY POLICY</Link>
-                  </label>
+                 <div className="terms-container">
+  <input type="checkbox" id="terms" />
+  <label htmlFor="terms" className="terms-text">
+    I AGREE TO THE <Link to="#">TERMS OF SERVICE</Link> AND ACKNOWLEDGE THAT I UNDERSTAND THE <Link to="#">PRIVACY POLICY</Link>
+  </label>
+</div>
+
                   <button className="signup-button">SIGN UP</button>
                 </div>
               </div>
