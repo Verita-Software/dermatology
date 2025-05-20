@@ -29,7 +29,7 @@ const blogs = [
           to look for, and when to see a dermatologist.
         </p>
 
-        <h1>What Is Early-Stage Skin Cancer?</h1>
+        <h3>What Is Early-Stage Skin Cancer?</h3>
         <ul>
           <li>
             <strong>Basal Cell Carcinoma (BCC):</strong> Often appears as a
