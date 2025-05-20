@@ -306,7 +306,7 @@
   .about-content p {
     font-size: 18px;
     line-height: 30px;
-    margin-top: 30px;
+    margin-top: 4px;
   }
 
   .quote-text {
@@ -319,7 +319,7 @@
   }
   .quote-box {
     height: auto;
-    padding: 16px;
+    padding: 0px 16px;
     margin-top: 30px;
   }
 

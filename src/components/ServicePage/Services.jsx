@@ -78,6 +78,7 @@ const Services = ({ selectedTab, setSelectedTab }) => {
                 singleValue: (base) => ({
                   ...base,
                   color: "#fff",
+                  marginTop:"4px"
                 }),
                 menu: (base) => ({
                   ...base,
@@ -123,7 +124,10 @@ const Services = ({ selectedTab, setSelectedTab }) => {
         {content.main && <p>{content.main}</p>}
         {content.sections?.map((section, index) => (
           <div key={index} className="service-section">
-            <h2 className="heading-h2">{section.heading}</h2>
+           <h2 className={`heading-h2 ${section.heading === "FAQ's" ? "faq-heading" : ""}`}>
+  {section.heading}
+</h2>
+
             {section.content && (
               <div>
                 <p>
@@ -150,7 +154,7 @@ const Services = ({ selectedTab, setSelectedTab }) => {
             {Array.isArray(section.faqs) &&
               section.faqs.length > 0 &&
               section.faqs.map((faq, qIdx) => (
-                <div key={qIdx} className="faq-item">
+                <div  key={qIdx} className="faq-item">
                   <div
                     className="faq-question"
                     onClick={() =>

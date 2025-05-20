@@ -239,6 +239,13 @@
   color: #fff !important;
 }
 
+/* Yeh margin top add karega selected text ke liye */
+/* .care__single-value {
+  margin-top: 4px;
+} */
+
+
+
 @media (min-width: 1024px) and (max-width: 1147px) {
   .care-buttons {
     flex-direction: column;

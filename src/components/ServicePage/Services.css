@@ -212,7 +212,7 @@
   margin: 80px 0 0 0;
   letter-spacing: 0;
   line-height: 44px;
-  color: #475666;
+  color: #000;
   font-weight: 400;
 }
 .heading-h4 {
@@ -262,7 +262,11 @@
   display: inline-block;
   margin-top: 0.5rem;
 }
+.faq-heading {
+  margin-bottom: 50px; /* or whatever spacing you want */
+}
 /* Responsive */
+
 
 @media (min-width: 1024px) and (max-width: 1147px) {
   .service-buttons {

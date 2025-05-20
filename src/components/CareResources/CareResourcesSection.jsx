@@ -103,6 +103,7 @@ const CareResourcesSection = ({ selectedTab, setSelectedTab }) => {
           <Select
             isSearchable={false}
             className="care-dropdown"
+            classNamePrefix="care" 
             value={{ value: selectedTab, label: selectedTab }}
             onChange={(option) => setSelectedTab(option.value)}
             options={options}
@@ -114,6 +115,7 @@ const CareResourcesSection = ({ selectedTab, setSelectedTab }) => {
               control: (base, state) => ({
                 ...base,
                 fontSize:"25px",
+                
                 backgroundColor: "#52606f",
                 borderColor: state.isFocused ? "#fff" : "#ccc",
                 boxShadow: "none",
@@ -125,6 +127,8 @@ const CareResourcesSection = ({ selectedTab, setSelectedTab }) => {
               singleValue: (base) => ({
                 ...base,
                 color: "#fff",
+               
+              
               }),
               menu: (base) => ({
                 ...base,

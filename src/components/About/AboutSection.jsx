@@ -215,6 +215,7 @@ const AboutSection = ({ selectedSection, setSelectedSection }) => {
                   key={section}
                   className={selectedSection === section ? "active" : ""}
                   onClick={() => setSelectedSection(section)}
+                  tabIndex={-1}
                 >
                   {section}
                 </li>

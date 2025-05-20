@@ -527,6 +527,50 @@ input[type="checkbox" i]
   }
 }
 
+@media (max-width: 1024px) {
+  .contact-content-heading {
+    font-size: 30px;
+    line-height: 80px;
+    margin-bottom: 20px;
+    font-family: 'Shippori Mincho B1', sans-serif;
+    color: #313942;
+}
+  .map-container{
+    margin-bottom: 170px;
+  }
+  .contact-section{
+    overflow-x: hidden;
+  }
+  .contact-content h2,
+  .about-subheading {
+    font-size: 22px;
+  }
+
+  .subheading-paragraph {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .appointment-card h1,
+  .appointment-title {
+    font-size: 16px;
+  }
+
+  .signup-button {
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .contact-sidebar {
+    flex-direction: column;
+    height: 50px;
+  }
+
+  .contact-sidebar ul {
+    flex-direction: column;
+    align-items: center;
+}
+}
 @media (max-width: 576px) {
   .contact-content-heading {
     font-size: 30px;
