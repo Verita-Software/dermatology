@@ -4,6 +4,7 @@ import ImageAssets from "../components/common/ImageAssets";
 import Hero from "../components/common/Hero/Hero";
 import Footer from "../components/common/Footer/Footer";
 import './BlogDetails.css'
+import Breadcrumbs from "../components/common/BreadCrumbs/BreadCrumbs";
 
 const blogs = [
   { slug: "blog-1",
@@ -142,6 +143,7 @@ const blog = blogs.find((b) => b.slug === slug);
   return (
     <>
       <Hero image={blog.image} showButton={false} />
+      <Breadcrumbs />
       <div className="blog-detail-container">
         <div className="blog-header">
           <h2 className="blog-title">{blog.title}</h2>

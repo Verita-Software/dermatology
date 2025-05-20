@@ -4,6 +4,7 @@ import Hero from "../components/common/Hero/Hero";
 import Footer from "../components/common/Footer/Footer";
 import ImageAssets from "../components/common/ImageAssets";
 import CareResourcesSection from "../components/CareResources/CareResourcesSection";
+import Breadcrumbs from "../components/common/BreadCrumbs/BreadCrumbs";
 
 // Slug-to-label mapping
 const tabSlugMap = {
@@ -54,6 +55,7 @@ const CareResources = () => {
         // }
         showButton={false}
       />
+      <Breadcrumbs />
       <CareResourcesSection
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}

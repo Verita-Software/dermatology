@@ -4,6 +4,8 @@ import Hero from "../components/common/Hero/Hero";
 import Footer from "../components/common/Footer/Footer";
 import ImageAssets from "../components/common/ImageAssets";
 import AboutSection from "../components/About/AboutSection";
+import Breadcrumbs from "../components/common/BreadCrumbs/BreadCrumbs";
+
 
 // Define slug-to-title mapping
 const sectionSlugMap = {
@@ -59,6 +61,7 @@ const About = () => {
         // heading="ABOUT US"
         showButton={false}
       />
+      <Breadcrumbs />
       <AboutSection
         selectedSection={selectedSection}
         setSelectedSection={handleSectionChange}

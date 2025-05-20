@@ -4,6 +4,7 @@ import Hero from "../components/common/Hero/Hero";
 import Footer from "../components/common/Footer/Footer";
 import ImageAssets from "../components/common/ImageAssets";
 import BeforeAfterSection from "../components/BeforAfter/BeforeAfterSection";
+import Breadcrumbs from "../components/common/BreadCrumbs/BreadCrumbs";
 
 // Map slug to display label
 const sectionSlugMap = {
@@ -47,6 +48,7 @@ const BeforeAfter = () => {
         // }
         showButton={false}
       />
+      <Breadcrumbs />
       <BeforeAfterSection
         selectedSection={selectedSection}
         setSelectedSection={setSelectedSection}

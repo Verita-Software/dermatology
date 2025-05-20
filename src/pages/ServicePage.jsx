@@ -4,6 +4,7 @@ import Hero from "../components/common/Hero/Hero";
 import Footer from "../components/common/Footer/Footer";
 import ImageAssets from "../components/common/ImageAssets";
 import Services from "../components/ServicePage/Services";
+import Breadcrumbs from "../components/common/BreadCrumbs/BreadCrumbs";
 
 const serviceSlugMap = {
   "cosmetic-services": "Cosmetic Services",
@@ -48,6 +49,7 @@ const ServicePage = () => {
         // heading={selectedTab}
         showButton={false}
       />
+      <Breadcrumbs />
       <Services selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       <Footer />
     </>

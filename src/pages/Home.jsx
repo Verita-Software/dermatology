@@ -6,6 +6,7 @@ import PatientExperienceSection from "../components/Home/PatientExperienceSectio
 import Footer from "../components/common/Footer/Footer";
 import ImageAssets from "../components/common/ImageAssets";
 import Videoassets from "../components/Home/Videoassets";
+import Breadcrumbs from "../components/common/BreadCrumbs/BreadCrumbs";
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
               showButton={true} 
               posterImage={ImageAssets.posterImage}
             />
+            <Breadcrumbs />
             {/* <Hero 
               image={ImageAssets.rejuvenatingImage} 
               heading="Dermatology" 

@@ -1,0 +1,44 @@
+.breadcrumbs {
+    padding: 20px 102px;
+    font-size: 19px;
+    /* color: #555; */
+    background-color: #f9f9f9;
+    font-family: "Poppins",sans-serif;
+
+}
+
+.breadcrumbs a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-current {
+  color: #000;
+  font-weight: 500;
+}
+
+
+@media (max-width: 1024px) {
+  .breadcrumbs {
+    padding: 20px 43px;
+    font-size: 19px;
+    /* color: #555; */
+    background-color: #f9f9f9;
+
+}
+}
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding: 20px 22px;
+    font-size: 19px;
+    /* color: #555; */
+    background-color: #f9f9f9;
+
+}
+}
+
+

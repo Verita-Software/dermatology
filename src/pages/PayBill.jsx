@@ -4,6 +4,7 @@ import Footer from "../components/common/Footer/Footer";
 import "../components/PayBill/PayBill.css";
 import ImageAssets from "../components/common/ImageAssets";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import Breadcrumbs from "../components/common/BreadCrumbs/BreadCrumbs";
 
 const PayBill = () => {
   return (
@@ -13,6 +14,7 @@ const PayBill = () => {
         // heading="PAY BILL"
         showButton={false}
       />
+      <Breadcrumbs />
 
       <div className="paybill-form-wrapper">
         <p>Pay Bill</p>

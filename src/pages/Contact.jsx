@@ -3,6 +3,7 @@ import Hero from "../components/common/Hero/Hero";
 import Footer from "../components/common/Footer/Footer";
 import ImageAssets from "../components/common/ImageAssets";
 import ContactSection from "../components/Contact/ContactSection";
+import Breadcrumbs from "../components/common/BreadCrumbs/BreadCrumbs";
 
 const Contact = () => {
   const [selectedTab, setSelectedTab] = useState("Contact Us");
@@ -22,6 +23,7 @@ const Contact = () => {
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       />
+      <Breadcrumbs />
       <Footer />
     </>
   );
