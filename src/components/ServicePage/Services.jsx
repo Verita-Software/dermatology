@@ -24,7 +24,7 @@ const DropdownIndicator = (props) => {
   );
 };
 
-const ServiceSection = ({ selectedTab, setSelectedTab }) => {
+const Services = ({ selectedTab, setSelectedTab }) => {
   const tabs = Object.keys(serviceData);
   const content = serviceData[selectedTab] || {};
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
@@ -47,8 +47,6 @@ const ServiceSection = ({ selectedTab, setSelectedTab }) => {
     setOpenFaqIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
-  
-
   return (
     <div className="service-page-wrapper">
       <aside className="service-page-sidebar">
@@ -70,8 +68,8 @@ const ServiceSection = ({ selectedTab, setSelectedTab }) => {
                   backgroundColor: "#52606F",
                   borderColor: state.isFocused ? "#fff" : "#ccc",
                   boxShadow: "none",
-                  borderRadius:"4px",
-                  borderStyle:"none",
+                  borderRadius: "4px",
+                  borderStyle: "none",
                   color: "#fff",
                   "&:hover": {
                     borderColor: "#fff",
@@ -126,7 +124,19 @@ const ServiceSection = ({ selectedTab, setSelectedTab }) => {
         {content.sections?.map((section, index) => (
           <div key={index} className="service-section">
             <h2 className="heading-h2">{section.heading}</h2>
-            {section.content && <p>{section.content} </p>}
+            {section.content && (
+              <div>
+                <p>
+                  {section.content}</p>
+                  {section.checkNowLink && (
+                    <Link to={section.checkNowLink} className="check-now-link">
+                      CHECK NOW
+                    </Link>
+                  )}
+                
+              </div>
+            )}
+
             {section.items?.map((item, idx) => (
               <div key={idx}>
                 <h3
@@ -134,7 +144,7 @@ const ServiceSection = ({ selectedTab, setSelectedTab }) => {
                 >
                   {item.title}
                 </h3>
-                <p >{item.content} </p>
+                <p>{item.content} </p>
               </div>
             ))}
             {Array.isArray(section.faqs) &&
@@ -160,8 +170,10 @@ const ServiceSection = ({ selectedTab, setSelectedTab }) => {
                     <p>{faq.question}</p>
                   </div>
                   {openFaqIndex === `${index}-${qIdx}` && (
-                    <div >
-                      <p style={{color:"#373636",marginBottom:"20px"}}>{faq.answer}</p>
+                    <div>
+                      <p style={{ color: "#373636", marginBottom: "20px" }}>
+                        {faq.answer}
+                      </p>
                     </div>
                   )}
                   {qIdx < section.faqs.length - 1 && <hr />}
@@ -183,7 +195,7 @@ const ServiceSection = ({ selectedTab, setSelectedTab }) => {
   );
 };
 
-export default ServiceSection;
+export default Services;
 
 // import React, { useEffect, useState } from "react";
 // import Select, { components } from "react-select";

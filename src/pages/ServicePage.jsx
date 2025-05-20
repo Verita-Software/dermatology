@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Hero from "../components/common/Hero/Hero";
 import Footer from "../components/common/Footer/Footer";
 import ImageAssets from "../components/common/ImageAssets";
-import ServiceSection from "../components/ServicePage/Services";
+import Services from "../components/ServicePage/Services";
 
 const serviceSlugMap = {
   "cosmetic-services": "Cosmetic Services",
@@ -48,7 +48,7 @@ const ServicePage = () => {
         // heading={selectedTab}
         showButton={false}
       />
-      <ServiceSection selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+      <Services selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
       <Footer />
     </>
   );

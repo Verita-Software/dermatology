@@ -54,6 +54,7 @@ const serviceData = {
         heading: "Before & After Results",
         content:
           "See natural, subtle improvements in skin, contours, and overall radiance. Real results, personalized for you.",
+          checkNowLink: "/before-after/cosmetic-services"
       },
       {
         heading: "Why Choose Us for Skin Cosmetic Services?",
@@ -150,6 +151,7 @@ const serviceData = {
         heading: "Before & After Results",
         content:
           "Non-invasive treatments that refresh skin, boost collagen, and improve tone, texture, and radiance.",
+          checkNowLink: "/before-after/skin-rejuvenation",
       },
       {
         heading: "Why Choose Us for Skin Rejuvenation?",
@@ -254,6 +256,7 @@ const serviceData = {
         heading: "Before & After Results",
         content:
           "See the difference expert care can make. Our before & after results showcase the subtle yet powerful transformations achieved with our injectable treatments.",
+          checkNowLink: "/before-after/injectables"
       },
       {
         heading: "Why Choose Us for Skin  Injectables?",
@@ -353,6 +356,7 @@ const serviceData = {
         heading: "Before & After Results",
         content:
           "Our patients see visible improvements in acne, skin texture, and clarity within weeks. Consistent treatment leads to long-lasting, transformative results—restoring confidence along with clear skin",
+          checkNowLink: "/before-after/acne-treatment"
       },
       {
         heading: "Why Choose Us for Acne Treatment?",

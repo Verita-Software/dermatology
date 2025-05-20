@@ -10,6 +10,7 @@ const sectionSlugMap = {
   "skin-rejuvenation": "Skin Rejuvenation",
   "injectables": "Injectables",
   "acne-treatment": "Acne Treatment",
+  "cosmetic-services": "Cosmetic Services",
 };
 
 // Reverse map label to slug
