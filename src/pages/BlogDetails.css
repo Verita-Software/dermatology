@@ -79,6 +79,7 @@
 .blog-detail-container li {
   margin-bottom: 0.5rem;
   font-size: 22px;
+  color: gray;
 }
 
 .blog-detail-container li strong {
