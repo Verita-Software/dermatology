@@ -116,6 +116,7 @@
 
   .hero-text {
     margin-left: -10px;
+            margin-top: -19px;
   }
 
   .hero-text .hero-heading {
@@ -141,6 +142,8 @@
 
   .hero-text .hero-heading {
     font-size: 42px;
+    margin-top: 138px;
+    
   }
 
   .book-now {

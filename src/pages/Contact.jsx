@@ -19,11 +19,11 @@ const Contact = () => {
         // heading="Contact Us"
         showButton={false}
       />
+        <Breadcrumbs />
       <ContactSection
         selectedTab={selectedTab}
         setSelectedTab={setSelectedTab}
       />
-      <Breadcrumbs />
       <Footer />
     </>
   );

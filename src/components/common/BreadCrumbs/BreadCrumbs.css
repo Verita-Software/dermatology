@@ -18,8 +18,10 @@
 
 .breadcrumb-current {
   color: #000;
-  font-weight: 500;
+  font-weight: 400;
+  font-family: "Poppins",sans-serif;
 }
+
 
 
 @media (max-width: 1024px) {
