@@ -46,10 +46,10 @@ const blogs = [
         </ul>
 
         <p>
-          <strong>
+          <p style={{fontSize:"28px",fontWeight:"400",color:"#000"}}>
             Recognizing these signs early can make a significant difference in
             treatment outcomes.
-          </strong>
+          </p>
         </p>
 
         <h3>Can Skin Cancer Look Like a Rash?</h3>
@@ -81,7 +81,7 @@ const blogs = [
 
         <h3>When to See a Dermatologist</h3>
         <p>
-          <strong>Seek professional evaluation if you notice:</strong>
+          <p style={{fontSize:"28px",fontWeight:"400",color:"#000"}}>Seek professional evaluation if you notice:</p>
         </p>
         <ul className="no-bullets">
           <li>A skin patch that doesn’t heal within 2–3 weeks</li>
