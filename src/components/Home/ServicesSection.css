@@ -138,6 +138,7 @@
 }
 
 @media (max-width: 768px) {
+ 
   .embla__slide {
     flex: 0 0 100%;
   }
@@ -171,15 +172,28 @@
   }
   
   .services-section-wrapper {
-    padding: 35px 20px;
-    height: 730px;
+    padding: 23px 20px;
+    height: 680px;
   }
   .caption {
     font-size: 26px;
   }
   .services-heading{
     font-size: 26px;
-    margin-top: 0px;
+        margin-top: -21px;
+        position: sticky;
+        position: absolute;
+        margin: auto;
+        margin-left: 98px;
+        margin-bottom: 22px;
   }
+  .side-slide img,
+  .center-slide img {
+   
+    margin-top:20px;
+  }
+
+  
+
 
 }
