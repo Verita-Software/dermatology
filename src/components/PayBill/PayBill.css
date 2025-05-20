@@ -3,7 +3,7 @@
 }
 
 .paybill-form-wrapper p {
-  font-family: 'Shippori Mincho B1',sans-serif;
+  font-family: "Shippori Mincho B1", sans-serif;
   font-size: 70px;
   font-weight: 400;
   margin-bottom: 45px;
@@ -34,31 +34,31 @@
   gap: 26px;
 }
 
-.payment-info >p,
-.billing-info > p{
-  font-family: 'Poppins', sans-serif;
+.payment-info > p,
+.billing-info > p {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
-     font-size: 22px;
-     color: #003F62;
-     letter-spacing: 0;
-     line-height: 45px;
-     margin-bottom: 35px;
-} 
+  font-size: 22px;
+  color: #003f62;
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-bottom: 35px;
+}
 
 label {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
-  color: #003F62;
+  color: #003f62;
   font-size: 20px;
   line-height: 32px;
 }
 
 input[type="text"],
 input[type="email"] {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   padding: 10px;
-  border: 1px solid #ACACAC;
+  border: 1px solid #acacac;
   border-radius: 4px;
   font-size: 18px;
   outline: none;
@@ -96,12 +96,12 @@ button[type="submit"] {
   font-size: 18px;
   /* border-radius: 4px; */
 }
-.form-group{
+.form-group {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
-.billing-info >.address-2-adjusting{
+.billing-info > .address-2-adjusting {
   margin-top: 67px;
 }
 .submit-button-wrapper {
@@ -110,22 +110,21 @@ button[type="submit"] {
   margin-top: 40px;
   width: 100%;
 }
-.submit-button-wrapper> button{
-width: 30%;
+.submit-button-wrapper > button {
+  width: 30%;
 }
-
 
 /* Tablet view */
 @media (max-width: 1024px) {
   .paybill-form-wrapper p {
-    font-family: 'Shippori Mincho B1', sans-serif;
+    font-family: "Shippori Mincho B1", sans-serif;
     font-size: 50px;
     font-weight: 400;
     margin-bottom: 45px;
     color: #313942;
     letter-spacing: 0;
     line-height: 80px;
-}
+  }
   .paybill-form-wrapper {
     padding: 40px 60px;
   }
@@ -150,15 +149,30 @@ width: 30%;
 
 /* Mobile view */
 @media (max-width: 768px) {
+  .payment-info,
+  .billing-info {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .submit-button-wrapper {
+    margin-top: 5px;
+  }
+  .billing-info > .address-2-adjusting {
+    margin-top: 15px;
+  }
+
   .paybill-form-wrapper p {
-    font-family: 'Shippori Mincho B1', sans-serif;
+    font-family: "Shippori Mincho B1", sans-serif;
     font-size: 35px;
     font-weight: 400;
-    margin-bottom: 45px;
+    margin-bottom: 15px;
     color: #313942;
     letter-spacing: 0;
     line-height: 80px;
-}
+  }
   .paybill-form-wrapper {
     padding: 30px 20px;
   }
@@ -183,14 +197,9 @@ width: 30%;
   }
 
   button[type="submit"] {
-    width:100%;
+    width: 100%;
+  }
 }
-}
-
-
-
-
-
 
 /* .paybill-form-wrapper {
   padding: 60px 100px;
@@ -276,7 +285,6 @@ button[type="submit"] {
   font-size: 16px;
   border-radius: 4px;
 } */
-
 
 /* .paybill-form-wrapper {
     padding: 60px 100px;
