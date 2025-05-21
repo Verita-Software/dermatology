@@ -9,14 +9,14 @@ const cards = [
     tag: "MIDDLETOWN MEDICAL LEADING PROVIDER",
     title: `MIDDLETOWN MEDICAL DESTINATION FOR\u00A0SKINCARE`,
     button: "SCHEDULE A CONSULT",
-    link: "/contact", // 👈 Contact page
+    link: "/contact", 
   },
   {
     image: ImageAssets.Expert2,
     tag: "Blog",
     title: "MULTICULTURAL SKINCARE EXPERTS",
     button: "READ MORE",
-    link: "/blog", // 👈 Blog page
+    link: "/blogs", 
   },
 ];
 
