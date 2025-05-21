@@ -1,122 +1,258 @@
-import React, { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
+import { useState, useEffect, useRef } from "react";
+import "./ServicesSection.css";
 import ImageAssets from "../common/ImageAssets";
-import Autoplay from "embla-carousel-autoplay";
-import { Button } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import './ServicesSection.css';
+import { Link } from "react-router-dom";
 
-const ServicesSection = () => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
-  const autoplayOptions = {
-    delay: 3000,
-    stopOnInteraction: false,
+const ServicesSection = ({ images, autoPlayInterval = 3000 }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const intervalRef = useRef(null);
+
+  const carouselImages =
+    Array.isArray(images) && images.length === 4
+      ? images
+      : [
+          {
+            src: ImageAssets.cosmeticServices,
+            name: "Cosmetic Services",
+            link: "/services/cosmetic-services",
+          },
+          {
+            src: ImageAssets.injectables,
+            name: "Injectables",
+            link: "/services/injectables",
+          },
+          {
+            src: ImageAssets.acneTreatment,
+            name: "Acne Treatment",
+            link: "/services/acne-treatment",
+          },
+          {
+            src: ImageAssets.skinreju,
+            name: "Skin Rejuvenation",
+            link: "/services/skin-rejuvenation",
+          },
+        ];
+
+  const goToNext = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setActiveIndex((prev) => (prev + 1) % carouselImages.length);
+    setTimeout(() => setIsAnimating(false), 500);
   };
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true,
-      align: "center",
-      skipSnaps: false,
-    },
-    [Autoplay(autoplayOptions)]
-  );
-
-  const baseImages = [
-    {
-      src: ImageAssets.cosmeticServices,
-      name: "Cosmetic Services",
-      link: "/services/cosmetic-services",
-    },
-    {
-      src: ImageAssets.injectables,
-      name: "Injectables",
-      link: "/services/injectables",
-    },
-    {
-      src: ImageAssets.acneTreatment,
-      name: "Acne Treatment",
-      link: "/services/acne-treatment",
-    },
-    {
-      src: ImageAssets.skinreju,
-      name: "Skin Rejuvenation",
-      link: "/services/skin-rejuvenation",
-    },
-  ];
-
-  const images = Array.from({ length:50 }, (_, i) => baseImages[i % 4]);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
+  const goToPrev = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setActiveIndex(
+      (prev) => (prev - 1 + carouselImages.length) % carouselImages.length
+    );
+    setTimeout(() => setIsAnimating(false), 500);
+  };
 
   useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on("select", onSelect);
-    onSelect();
-  }, [emblaApi, onSelect]);
+    intervalRef.current = setInterval(() => {
+      goToNext();
+    }, autoPlayInterval);
 
-  const prevIndex = (selectedIndex - 1 + images.length) % images.length;
-  const nextIndex = (selectedIndex + 1) % images.length;
+    return () => clearInterval(intervalRef.current);
+  }, [autoPlayInterval]);
+
+  const leftIndex =
+    (activeIndex - 1 + carouselImages.length) % carouselImages.length;
+  const rightIndex = (activeIndex + 1) % carouselImages.length;
 
   return (
-    <div className="services-section-wrapper">
-      <div className="services-heading-wrapper">
-        <h2 className="services-heading">OUR SERVICES</h2>
-        <div className="nav-buttons">
-          <button className="nav-btn"  onClick={() => emblaApi?.scrollPrev()}>
-            <ArrowBackIosNewIcon />
-          </button>
-          <button className="nav-btn"
-            
-            onClick={() => emblaApi?.scrollNext()}
-            sx={{ ml: 2 }}
+    <div className="carousel-container">
+      {/* Header with title and buttons */}
+      <div className="carousel-header">
+        <h2 className="carousel-title">OUR SERVICES</h2>
+        <div className="carousel-top-buttons">
+          <button
+            onClick={goToPrev}
+            className="carousel-top-button"
+            aria-label="Previous"
           >
-            <ArrowForwardIosIcon />
+            <ArrowBackIosNewIcon style={{fontSize:"15px"}} />
+          </button>
+          <button
+            onClick={goToNext}
+            className="carousel-top-button"
+            aria-label="Next"
+          >
+            <ArrowForwardIosIcon style={{fontSize:"15px"}}/>
           </button>
         </div>
       </div>
 
-      <div className="embla" ref={emblaRef}>
-        <div className="embla__container">
-          {images.map((img, index) => {
-            let slideClass = "hidden-slide";
-            if (index === selectedIndex) slideClass = "center-slide";
-            else if (index === prevIndex || index === nextIndex)
-              slideClass = "side-slide";
+      {/* Main carousel */}
+      <div className="carousel-inner">
+        <div className="carousel-item carousel-item-left">
+          <img
+            src={carouselImages[leftIndex]?.src || "/placeholder.svg"}
+            alt={carouselImages[leftIndex]?.name || "Left"}
+            className="carousel-image blurred small"
+          />
+        </div>
 
-            const showCaption = index === selectedIndex;
+       <div className="carousel-item carousel-item-center">
+  <Link to={carouselImages[activeIndex]?.link || "#"}>
+    <img 
+      src={carouselImages[activeIndex]?.src || "/placeholder.svg"}
+      alt={carouselImages[activeIndex]?.name || "Center"}
+      className="carousel-image large"
+      style={{ cursor: "pointer" }}
+    />
+  </Link>
+  <div className="carousel-caption">
+    {carouselImages[activeIndex]?.name}
+  </div>
+</div>
 
-            return (
-              <div key={index} className={`embla__slide ${slideClass}`}>
-                <div className="slide-content">
-                  <a href={img.link}>
-                    <img src={img.src} alt={img.name} />
-                  </a>
-                  <div className="caption-wrapper">
-                    {showCaption ? (
-                      <p className="caption">{img.name}</p>
-                    ) : (
-                      <div className="caption-placeholder" />
-                    )}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+        <div className="carousel-item carousel-item-right">
+          <img
+            src={carouselImages[rightIndex]?.src || "/placeholder.svg"}
+            alt={carouselImages[rightIndex]?.name || "Right"}
+            className="carousel-image blurred small"
+          />
         </div>
       </div>
 
-      
+     
     </div>
   );
 };
 
 export default ServicesSection;
+
+
+
+
+
+
+// import { useState, useEffect, useRef } from "react"
+// import "./ServicesSection.css"
+// import ImageAssets from "../common/ImageAssets"
+
+// const ServicesSection = ({ images, autoPlayInterval = 3000 }) => {
+//   const [activeIndex, setActiveIndex] = useState(0)
+//   const [isAnimating, setIsAnimating] = useState(false)
+//   const intervalRef = useRef(null)
+
+//   const carouselImages = Array.isArray(images) && images.length === 4
+//     ? images
+//     : [
+//         {
+//           src: ImageAssets.cosmeticServices,
+//           name: "Cosmetic Services",
+//           link: "/services/cosmetic-services",
+//         },
+//         {
+//           src: ImageAssets.injectables,
+//           name: "Injectables",
+//           link: "/services/injectables",
+//         },
+//         {
+//           src: ImageAssets.acneTreatment,
+//           name: "Acne Treatment",
+//           link: "/services/acne-treatment",
+//         },
+//         {
+//           src: ImageAssets.skinreju,
+//           name: "Skin Rejuvenation",
+//           link: "/services/skin-rejuvenation",
+//         },
+//       ]
+
+//   const goToNext = () => {
+//     if (isAnimating) return
+//     setIsAnimating(true)
+//     setActiveIndex((prev) => (prev + 1) % carouselImages.length)
+//     setTimeout(() => setIsAnimating(false), 500)
+//   }
+
+//   const goToPrev = () => {
+//     if (isAnimating) return
+//     setIsAnimating(true)
+//     setActiveIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)
+//     setTimeout(() => setIsAnimating(false), 500)
+//   }
+
+//   useEffect(() => {
+//     intervalRef.current = setInterval(() => {
+//       goToNext()
+//     }, autoPlayInterval)
+
+//     return () => clearInterval(intervalRef.current)
+//   }, [autoPlayInterval]) // run once when mounted, or if interval changes
+
+//   const leftIndex = (activeIndex - 1 + carouselImages.length) % carouselImages.length
+//   const rightIndex = (activeIndex + 1) % carouselImages.length
+
+//   return (
+//     <div className="carousel-container">
+//       <div className="carousel-inner">
+//         <div className="carousel-item carousel-item-left">
+//           <img
+//             src={carouselImages[leftIndex]?.src || "/placeholder.svg"}
+//             alt={carouselImages[leftIndex]?.name || "Left"}
+//             className="carousel-image blurred small"
+//           />
+//         </div>
+
+//       <div className="carousel-item carousel-item-center">
+//   <img
+//     src={carouselImages[activeIndex]?.src || "/placeholder.svg"}
+//     alt={carouselImages[activeIndex]?.name || "Center"}
+//     className="carousel-image large"
+//   />
+//   <div className="carousel-caption">
+//     {carouselImages[activeIndex]?.name}
+//   </div>
+// </div>
+
+
+
+//         <div className="carousel-item carousel-item-right">
+//           <img
+//             src={carouselImages[rightIndex]?.src || "/placeholder.svg"}
+//             alt={carouselImages[rightIndex]?.name || "Right"}
+//             className="carousel-image blurred small"
+//           />
+//         </div>
+//       </div>
+
+//       <button onClick={goToPrev} className="carousel-button carousel-button-prev" aria-label="Previous">
+//         &lt;
+//       </button>
+//       <button onClick={goToNext} className="carousel-button carousel-button-next" aria-label="Next">
+//         &gt;
+//       </button>
+
+//       <div className="carousel-indicators">
+//         {carouselImages.map((_, index) => (
+//           <button
+//             key={index}
+//             onClick={() => setActiveIndex(index)}
+//             className={`carousel-indicator ${index === activeIndex ? "carousel-indicator-active" : ""}`}
+//             aria-label={`Go to slide ${index + 1}`}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default ServicesSection;
+
+
+
+
+
+
 
 // import React, { useCallback, useEffect, useState } from "react";
 // import useEmblaCarousel from "embla-carousel-react";
