@@ -4,7 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ImageAssets from "../ImageAssets";
 import "./Header.css";
 
-const Header = ({ toggleMenu, isMenuOpen, variant }) => {
+const Header = ({ toggleMenu, isMenuOpen, variant,isChatOpen}) => {
   const navigate = useNavigate();
   const isWhite = variant === "white";
 
@@ -16,7 +16,7 @@ const Header = ({ toggleMenu, isMenuOpen, variant }) => {
             <img src={ImageAssets.logo} alt="Logo" />
           </Link>
         </div>
-        <div className="header-right">
+       { !isChatOpen && ( <div className="header-right">
           <div onClick={() => navigate("/contact")} className={`contact ${isWhite ? "white" : ""}`}>
             845-421-7040
           </div>
@@ -26,7 +26,7 @@ const Header = ({ toggleMenu, isMenuOpen, variant }) => {
               style={{ color: isWhite ? "white" : "black", fontSize: 40 }}
             />
           </div>
-        </div>
+        </div>)}
       </div>
     </header>
   );

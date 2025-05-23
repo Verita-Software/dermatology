@@ -1,5 +1,5 @@
 // AppContent.js
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/common/Header/Header";
 import Sidebar from "./components/common/Sidebar/Sidebar";
@@ -12,9 +12,11 @@ import BeforeAfter from "./pages/BeforeAfter";
 import Contact from "./pages/Contact";
 import ServicePage from "./pages/ServicePage";
 import BlogDetail from "./pages/BlogDetail";
+import ChatWidget from "./components/common/ChatWidget";
 
 
 const AppContent = ({ isMenuOpen, toggleMenu }) => {
+   const [isChatOpen, setIsChatOpen] = useState(false);
   const location = useLocation();
   const isAboutPage = location.pathname === "/about";
   const isBlogPage = location.pathname === "/blogs";
@@ -26,7 +28,8 @@ const AppContent = ({ isMenuOpen, toggleMenu }) => {
       <Header
         toggleMenu={toggleMenu}
         isMenuOpen={isMenuOpen}
-        variant={isAboutPage || isBlogPage ? "white" : "default"}
+        variant={isAboutPage || isBlogPage ? "white" : "default"} 
+        isChatOpen={isChatOpen}  
       />
       <div className="content-wrapper">
         <main>
@@ -47,6 +50,10 @@ const AppContent = ({ isMenuOpen, toggleMenu }) => {
         </main>
       </div>
       <Sidebar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+       <ChatWidget
+        isChatOpen={isChatOpen}          // <-- pass state and setter to ChatWidget
+        setIsChatOpen={setIsChatOpen}
+      />
     </>
   );
 };

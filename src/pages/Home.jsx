@@ -7,6 +7,7 @@ import Footer from "../components/common/Footer/Footer";
 import ImageAssets from "../components/common/ImageAssets";
 import Videoassets from "../components/Home/Videoassets";
 import Breadcrumbs from "../components/common/BreadCrumbs/BreadCrumbs";
+import ChatWidget from "../components/common/ChatWidget";
 
 const Home = () => {
     return (
@@ -27,6 +28,7 @@ const Home = () => {
             <ServicesSection />
             <PatientExperienceSection />
             <Footer />
+            {/* <ChatWidget /> */}
         </>
     );
 };

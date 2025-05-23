@@ -11,7 +11,7 @@ const Sidebar = ({ isMenuOpen, toggleMenu }) => {
       {isMenuOpen && <div className="sidebar-overlay" onClick={toggleMenu}></div>}
       <div className={`sidebar ${isMenuOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
-          <Link to="/contact">
+          <Link style={{textDecoration:"none"}} to="/contact">
                       
                     
           <span style={{cursor:"pointer",textDecoration:"none"}} className="contact-number">845-421-7040</span>
